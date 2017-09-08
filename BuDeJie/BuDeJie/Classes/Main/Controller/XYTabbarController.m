@@ -20,9 +20,22 @@
 
 @implementation XYTabbarController
 
+// 设置item 的 apperence
 + (void)load
 {
-    // 设置item 的 apperence
+    // 获取哪个类中UITabBarItem
+    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
+    
+    // 设置按钮选中标题的颜色:富文本:描述一个文字颜色,字体,阴影,空心,图文混排
+    // 创建一个描述文本属性的字典
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:attrs forState:UIControlStateSelected];
+    
+    // 设置字体尺寸:只有设置正常状态下,才会有效果
+    NSMutableDictionary *attrsNor = [NSMutableDictionary dictionary];
+    attrsNor[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    [item setTitleTextAttributes:attrsNor forState:UIControlStateNormal];
 }
 
 //+ (void)initialize {
@@ -87,9 +100,16 @@
     childVc.tabBarItem.image = [UIImage imageNamed:imageName];
     childVc.tabBarItem.selectedImage = [UIImage imageOriginalWithName:selectedImageName]; // ios7 之后
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+    UINavigationController *nav = nil;
+    if (![childVc isKindOfClass:[XYPublishViewController class]]) {
+        nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+        [self addChildViewController:nav];
+    }else
+    {
+        [self addChildViewController:childVc];
+    }
 
-    [self addChildViewController:nav];
+//    [self addChildViewController:nav];
 
 }
 
