@@ -22,6 +22,7 @@
 		B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496907D1F62A04900F7A17C /* XYTabbarController.m */; };
 		B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */; };
 		B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */; };
+		B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
 		B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		B4BFC4781F66FA9100439EDD /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
+		B4BFC4791F6700A100439EDD /* UIBarButtonItem+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYAdd.h"; sourceTree = "<group>"; };
+		B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYAdd.m"; sourceTree = "<group>"; };
 		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,6 +433,8 @@
 				B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */,
 				B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */,
 				B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */,
+				B4BFC4791F6700A100439EDD /* UIBarButtonItem+XYAdd.h */,
+				B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 				B496906E1F629F0B00F7A17C /* XYFriendTrendViewController.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
 				B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */,
+				B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,

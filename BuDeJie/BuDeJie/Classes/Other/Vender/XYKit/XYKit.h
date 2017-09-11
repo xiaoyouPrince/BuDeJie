@@ -12,6 +12,7 @@
 #import "XYKitMacro.h"
 #import "UIView+XYAdd.h"
 #import "UIImage+XYAdd.h"
+#import "UIBarButtonItem+XYAdd.h"
 
 
 
