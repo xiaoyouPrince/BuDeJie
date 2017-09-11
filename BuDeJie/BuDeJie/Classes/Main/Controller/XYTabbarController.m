@@ -97,7 +97,7 @@
 {
     childVc.title = title;
     
-    childVc.tabBarItem.image = [UIImage imageNamed:imageName];
+    childVc.tabBarItem.image = [UIImage imageOriginalWithName:imageName];
     childVc.tabBarItem.selectedImage = [UIImage imageOriginalWithName:selectedImageName]; // ios7 之后
     
     UINavigationController *nav = nil;
@@ -107,6 +107,8 @@
     }else
     {
         [self addChildViewController:childVc];
+        childVc.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+
     }
 
 //    [self addChildViewController:nav];
