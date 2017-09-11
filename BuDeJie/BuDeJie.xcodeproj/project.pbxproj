@@ -21,6 +21,7 @@
 		B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49690761F629FE400F7A17C /* XYProfileViewController.m */; };
 		B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496907D1F62A04900F7A17C /* XYTabbarController.m */; };
 		B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */; };
+		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		B49E6EC11F630D2D00826DF9 /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
 		B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
 		B49E6EC41F630D7000826DF9 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
+		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +378,8 @@
 		B496907B1F62A03400F7A17C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */,
+				B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -563,6 +568,7 @@
 				B496906B1F62935400F7A17C /* XYEssenceViewController.m in Sources */,
 				B496906E1F629F0B00F7A17C /* XYFriendTrendViewController.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
+				B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,

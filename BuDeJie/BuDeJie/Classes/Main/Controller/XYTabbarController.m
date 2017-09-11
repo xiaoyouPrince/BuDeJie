@@ -13,8 +13,11 @@
 #import "XYNewViewController.h"
 #import "XYProfileViewController.h"
 #import "XYKit.h"
+#import "XYTabBar.h"
 
 @interface XYTabbarController ()
+
+@property(nonatomic,weak) XYTabBar *tabbar;
 
 @end
 
@@ -49,8 +52,32 @@
     
     // 设置自控制器
     [self setupChildViewControllers];
+    
+    // 设置tabbar
+    [self setupTabbar];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 此方法中tabbar才会添加子控件
+    DLog(@"%@",self.tabBar.subviews);
+}
+
+
+/**
+ 设置自己的tabbar
+ */
+- (void)setupTabbar
+{
+    XYTabBar *tabbar = [XYTabBar new];
+    
+    // 系统 tabBar 是 readonly 不能直接赋值，但是可以使用 KVC 整体替换 tabBar 属性
+    [self setValue:tabbar forKey:@"tabBar"];
+    
+    DLog(@"%@",self.tabBar);
+}
 
 /**
  设置所有子控制器
@@ -68,10 +95,10 @@
                          imageName:@"tabBar_new_icon"
                  selectedImageName:@"tabBar_new_click_icon"];
     
-    XYPublishViewController *publishVc = [XYPublishViewController new];
-    [self setupChildViewController:publishVc title:@""
-                         imageName:@"tabBar_publish_icon"
-                 selectedImageName:@"tabBar_publish_click_icon"];
+//    XYPublishViewController *publishVc = [XYPublishViewController new];
+//    [self setupChildViewController:publishVc title:@""
+//                         imageName:@"tabBar_publish_icon"
+//                 selectedImageName:@"tabBar_publish_click_icon"];
     
     XYFriendTrendViewController *friendVc = [XYFriendTrendViewController new];
     [self setupChildViewController:friendVc title:@"关注"
@@ -110,9 +137,6 @@
         childVc.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
 
     }
-
-//    [self addChildViewController:nav];
-
 }
 
 
