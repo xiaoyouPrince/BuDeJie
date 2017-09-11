@@ -21,6 +21,7 @@
 		B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49690761F629FE400F7A17C /* XYProfileViewController.m */; };
 		B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496907D1F62A04900F7A17C /* XYTabbarController.m */; };
 		B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */; };
+		B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,9 @@
 		B49E6EC11F630D2D00826DF9 /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
 		B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
 		B49E6EC41F630D7000826DF9 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
+		B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
+		B4BFC4781F66FA9100439EDD /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +144,7 @@
 				B49690211F62444300F7A17C /* Assets.xcassets */,
 				B49690231F62444300F7A17C /* LaunchScreen.storyboard */,
 				B49690261F62444300F7A17C /* Info.plist */,
+				B4BFC4781F66FA9100439EDD /* BuDeJie.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -423,6 +428,8 @@
 			children = (
 				B49E6EC11F630D2D00826DF9 /* UIImage+XYAdd.h */,
 				B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */,
+				B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */,
+				B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -574,6 +581,7 @@
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
+				B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +735,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SLUU2646N5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BuDeJie/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -744,6 +754,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SLUU2646N5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BuDeJie/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

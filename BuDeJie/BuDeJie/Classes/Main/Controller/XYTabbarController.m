@@ -12,7 +12,6 @@
 #import "XYPublishViewController.h"
 #import "XYNewViewController.h"
 #import "XYProfileViewController.h"
-#import "XYKit.h"
 #import "XYTabBar.h"
 
 @interface XYTabbarController ()

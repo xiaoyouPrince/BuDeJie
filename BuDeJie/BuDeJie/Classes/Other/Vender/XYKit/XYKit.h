@@ -10,7 +10,9 @@
 #define XYKit_h
 
 #import "XYKitMacro.h"
+#import "UIView+XYAdd.h"
 #import "UIImage+XYAdd.h"
+
 
 
 #endif /* XYKit_h */

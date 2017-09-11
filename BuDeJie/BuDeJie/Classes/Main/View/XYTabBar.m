@@ -7,7 +7,6 @@
 //
 
 #import "XYTabBar.h"
-#import "XYKit.h"
 
 @interface XYTabBar ()
 
