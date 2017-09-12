@@ -10,10 +10,19 @@
 #define XYKit_h
 
 #import "XYKitMacro.h"
+
+/************** UIKit ***************/
 #import "UIView+XYAdd.h"
 #import "UIImage+XYAdd.h"
 #import "UIBarButtonItem+XYAdd.h"
 
+/*************** Foundation **************/
+
+
+
+/*************** XYTools **************/
+#import "XYRequestParam.h"
+#import "XYHttpTool.h"
 
 
 #endif /* XYKit_h */

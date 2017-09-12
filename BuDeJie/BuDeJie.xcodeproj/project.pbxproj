@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80A3B02550C0CFE93E52959 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99362A586CAA721F05422AC9 /* libPods-BuDeJie.a */; };
 		B49690201F62444300F7A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B496901E1F62444300F7A17C /* Main.storyboard */; };
 		B49690221F62444300F7A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49690211F62444300F7A17C /* Assets.xcassets */; };
 		B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49690231F62444300F7A17C /* LaunchScreen.storyboard */; };
@@ -34,6 +35,10 @@
 		B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4951F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png */; };
 		B4BFC49D1F67D8ED00439EDD /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4961F67D8ED00439EDD /* LaunchImage.png */; };
 		B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4971F67D8ED00439EDD /* LaunchImage@2x.png */; };
+		B4BFC4A21F6837BC00439EDD /* XYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4A11F6837BC00439EDD /* XYHttpTool.m */; };
+		B4BFC4A51F68388E00439EDD /* XYRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4A41F68388E00439EDD /* XYRequestParam.m */; };
+		B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4A71F683B4100439EDD /* XYADItem.m */; };
+		B4BFC4AA1F683EE600439EDD /* ad.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4A91F683EE600439EDD /* ad.plist */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99362A586CAA721F05422AC9 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49690121F62444300F7A17C /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B496901F1F62444300F7A17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B49690211F62444300F7A17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +110,17 @@
 		B4BFC4951F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		B4BFC4961F67D8ED00439EDD /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		B4BFC4971F67D8ED00439EDD /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		B4BFC4A01F6837BC00439EDD /* XYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHttpTool.h; sourceTree = "<group>"; };
+		B4BFC4A11F6837BC00439EDD /* XYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHttpTool.m; sourceTree = "<group>"; };
+		B4BFC4A31F68388E00439EDD /* XYRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRequestParam.h; sourceTree = "<group>"; };
+		B4BFC4A41F68388E00439EDD /* XYRequestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRequestParam.m; sourceTree = "<group>"; };
+		B4BFC4A61F683B4100439EDD /* XYADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYADItem.h; sourceTree = "<group>"; };
+		B4BFC4A71F683B4100439EDD /* XYADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYADItem.m; sourceTree = "<group>"; };
+		B4BFC4A91F683EE600439EDD /* ad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ad.plist; sourceTree = "<group>"; };
 		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
+		BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
+		DBABB8AE055121CB366C0A9A /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80A3B02550C0CFE93E52959 /* libPods-BuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086F0A2C524FA9BFE2C2E3DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBABB8AE055121CB366C0A9A /* Pods-BuDeJie.debug.xcconfig */,
+				BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B49690091F62444300F7A17C = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +165,8 @@
 				B496902E1F62444300F7A17C /* BuDeJieTests */,
 				B49690391F62444300F7A17C /* BuDeJieUITests */,
 				B49690131F62444300F7A17C /* Products */,
+				086F0A2C524FA9BFE2C2E3DB /* Pods */,
+				CDDB63A57EF98275BA2671FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +192,7 @@
 		B49690151F62444300F7A17C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4BFC4A91F683EE600439EDD /* ad.plist */,
 				B496905C1F6292AA00F7A17C /* AppDelegate.h */,
 				B496905D1F6292AA00F7A17C /* AppDelegate.m */,
 				B496905E1F6292AA00F7A17C /* main.m */,
@@ -437,6 +465,7 @@
 				B49E6EBE1F630D2D00826DF9 /* Base */,
 				B49E6EBF1F630D2D00826DF9 /* Foundation */,
 				B49E6EC01F630D2D00826DF9 /* UIKit */,
+				B4BFC49F1F67DFE800439EDD /* HttpTools */,
 			);
 			path = XYKit;
 			sourceTree = "<group>";
@@ -525,6 +554,8 @@
 		B4BFC4881F67D6FB00439EDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4BFC4A61F683B4100439EDD /* XYADItem.h */,
+				B4BFC4A71F683B4100439EDD /* XYADItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -558,6 +589,25 @@
 			path = "启动图片";
 			sourceTree = "<group>";
 		};
+		B4BFC49F1F67DFE800439EDD /* HttpTools */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC4A01F6837BC00439EDD /* XYHttpTool.h */,
+				B4BFC4A11F6837BC00439EDD /* XYHttpTool.m */,
+				B4BFC4A31F68388E00439EDD /* XYRequestParam.h */,
+				B4BFC4A41F68388E00439EDD /* XYRequestParam.m */,
+			);
+			path = HttpTools;
+			sourceTree = "<group>";
+		};
+		CDDB63A57EF98275BA2671FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99362A586CAA721F05422AC9 /* libPods-BuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -565,9 +615,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B496903F1F62444300F7A17C /* Build configuration list for PBXNativeTarget "BuDeJie" */;
 			buildPhases = (
+				A932214489C2FFC6F9E29EFB /* [CP] Check Pods Manifest.lock */,
 				B496900E1F62444300F7A17C /* Sources */,
 				B496900F1F62444300F7A17C /* Frameworks */,
 				B49690101F62444300F7A17C /* Resources */,
+				F136F3BF7FE8824AE909D52E /* [CP] Embed Pods Frameworks */,
+				8B62D54ED82480E38030163E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,6 +724,7 @@
 				B4BFC48E1F67D70F00439EDD /* XYADViewController.xib in Resources */,
 				B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */,
+				B4BFC4AA1F683EE600439EDD /* ad.plist in Resources */,
 				B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */,
 				B4BFC4991F67D8ED00439EDD /* LaunchImage-700-568h@2x.png in Resources */,
 				B4BFC49B1F67D8ED00439EDD /* LaunchImage-800-667h@2x.png in Resources */,
@@ -698,21 +752,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B62D54ED82480E38030163E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A932214489C2FFC6F9E29EFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F136F3BF7FE8824AE909D52E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B496900E1F62444300F7A17C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */,
+				B4BFC4A51F68388E00439EDD /* XYRequestParam.m in Sources */,
 				B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */,
 				B496906B1F62935400F7A17C /* XYEssenceViewController.m in Sources */,
 				B496906E1F629F0B00F7A17C /* XYFriendTrendViewController.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
 				B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */,
+				B4BFC4A21F6837BC00439EDD /* XYHttpTool.m in Sources */,
 				B4BFC4851F67105A00439EDD /* XYSettingsViewController.m in Sources */,
 				B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
+				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
@@ -866,6 +971,7 @@
 		};
 		B49690401F62444300F7A17C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBABB8AE055121CB366C0A9A /* Pods-BuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -885,6 +991,7 @@
 		};
 		B49690411F62444300F7A17C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
