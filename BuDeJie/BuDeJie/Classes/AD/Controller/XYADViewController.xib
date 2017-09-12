@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYADViewController">
             <connections>
                 <outlet property="adContainerView" destination="WhZ-eT-XP6" id="TpD-N8-2Xh"/>
-                <outlet property="countBtn" destination="end-En-Sed" id="hvC-c6-eA1"/>
+                <outlet property="jumpBtn" destination="end-En-Sed" id="cNa-bg-EMk"/>
                 <outlet property="launchImageView" destination="q03-yF-2aH" id="xRv-Ib-fa4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,16 +28,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhZ-eT-XP6" userLabel="广告占位View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="end-En-Sed">
-                    <rect key="frame" x="275" y="35" width="85" height="28"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="end-En-Sed">
+                    <rect key="frame" x="275" y="35" width="85" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="85" id="U35-RL-s3o"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="剩余 (3) 秒">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="跳转 (3) ">
                         <color key="titleColor" red="0.97715928819999998" green="0.97029622400000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="jumpBtnClick:" destination="-1" eventType="touchUpInside" id="9jA-Kx-buv"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

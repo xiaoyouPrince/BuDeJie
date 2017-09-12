@@ -8,14 +8,15 @@
 
 #import "XYADViewController.h"
 #import "XYADItem.h"
+#import "XYTabbarController.h"
 
 @interface XYADViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *launchImageView;
 @property (weak, nonatomic) IBOutlet UIView *adContainerView;
-@property (weak, nonatomic) IBOutlet UIButton *countBtn;
+@property (weak, nonatomic) IBOutlet UIButton *jumpBtn;
 @property(nonatomic,weak) UIImageView *adView; ///< 广告页
 @property(nonatomic , strong) XYADItem *item;
-
+@property(nonatomic,weak) NSTimer *timer;
 
 @end
 
@@ -23,6 +24,7 @@
 #define code2 @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGULPxnz3vndtkQW08nau_I1Y1P1Rhmhwz5Hb8nBuL5HDknWRhTA_qmvqVQhGGUhI_py4MQhF1TvChmgKY5H6hmyPW5RFRHzuET1dGULnhuAN85HchUy7s5HDhIywGujY3P1n3mWb1PvDLnvF-Pyf4mHR4nyRvmWPBmhwBPjcLPyfsPHT3uWm4FMPLpHYkFh7sTA-b5yRzPj6sPvRdFhPdTWYsFMKzuykEmyfqnauGuAu95Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiu9mLfqHbD_H70hTv6qnHn1PauVmynqnjclnj0lnj0lnj0lnj0lnj0hThYqniuVujYkFhkC5HRvnB3dFh7spyfqnW0srj64nBu9TjYsFMub5HDhTZFEujdzTLK_mgPCFMP85Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuBnHfdnjD4rjnvPWYkFh7sTZu-TWY1QW68nBuWUHYdnHchIAYqPHDzFhqsmyPGIZbqniuYThuYTjd1uAVxnz3vnzu9IjYzFh6qP1RsFMws5y-fpAq8uHT_nBuYmycqnau1IjYkPjRsnHb3n1mvnHDkQWD4niuVmybqniu1uy3qwD-HQDFKHakHHNn_HR7fQ7uDQ7PcHzkHiR3_RYqNQD7jfzkPiRn_wdKHQDP5HikPfRb_fNc_NbwPQDdRHzkDiNchTvwW5HnvPj0zQWndnHRvnBsdPWb4ri3kPW0kPHmhmLnqPH6LP1ndm1-WPyDvnHKBrAw9nju9PHIhmH9WmH6zrjRhTv7_5iu85HDhTvd15HDhTLTqP1RsFh4ETjYYPW0sPzuVuyYqn1mYnjc8nWbvrjTdQjRvrHb4QWDvnjDdPBuk5yRzPj6sPvRdgvPsTBu_my4bTvP9TARqnam"
 
 @implementation XYADViewController
+
 
 - (UIImageView *)adView
 {
@@ -49,6 +51,16 @@
     }
 }
 
+- (IBAction)jumpBtnClick:(UIButton *)sender {
+    
+    // 销毁广告界面,进入主框架界面
+    XYTabbarController *tabBarVc = [[XYTabbarController alloc] init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+    
+    // 干掉定时器
+    [_timer invalidate];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,6 +70,24 @@
     
     // 加载数据
     [self loadData];
+    
+    // 添加定时器倒计时
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
+}
+
+- (void)timeChange
+{
+    // 倒计时
+    static int i = 3;
+    
+    if (i == 0) {
+        
+        [self jumpBtnClick:nil];
+    }
+    
+    i--;
+    // 设置跳转按钮文字
+    [_jumpBtn setTitle:[NSString stringWithFormat:@"跳转 (%d)",i] forState:UIControlStateNormal];
 }
 
 /**
@@ -65,10 +95,6 @@
  */
 - (void)setupLaunchImage
 {
-    // 6p:LaunchImage-800-Portrait-736h@3x.png
-    // 6:LaunchImage-800-667h@2x.png
-    // 5:LaunchImage-568h@2x.png
-    // 4s:LaunchImage@2x.png
     if (iPhone6P) { // 6p
         self.launchImageView.image = [UIImage imageNamed:@"LaunchImage-800-Portrait-736h@3x"];
     } else if (iPhone6) { // 6
@@ -79,8 +105,6 @@
         self.launchImageView.image = [UIImage imageNamed:@"LaunchImage-700"];
     }
     
-    
-//    self.countBtn.layer.cornerRadius
 }
 
 - (void)loadData
