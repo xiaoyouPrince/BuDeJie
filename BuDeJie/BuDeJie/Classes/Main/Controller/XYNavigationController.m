@@ -33,9 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    DLog(@"%@",self.interactivePopGestureRecognizer);
-    DLog(@"%@",self.interactivePopGestureRecognizer.delegate);
  
     /**
      
@@ -67,17 +64,12 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
-    DLog(@"%@",self.interactivePopGestureRecognizer);
-    DLog(@"%@",self.interactivePopGestureRecognizer.delegate);
-    
     if (self.childViewControllers.count > 0) { //非rootViewController
         
         // 设置返回按钮
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"]  target:self action:@selector(back) title:@"返回"];
         viewController.hidesBottomBarWhenPushed = YES;
-        
-        DLog(@"%@",self.interactivePopGestureRecognizer);
-        DLog(@"%@",self.interactivePopGestureRecognizer.delegate);
+    
     }
     
     [super pushViewController:viewController animated:animated];
@@ -98,7 +90,7 @@
 //    [self.topViewController viewDidLoad];
     // 这个问题在真机上不会出现，在模拟器上出现，暂时无解。。。
     
-    DLog(@"%@",self.topViewController);
+//    DLog(@"%@",self.topViewController);
     
     return popVc;
 }

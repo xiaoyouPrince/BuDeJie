@@ -7,6 +7,8 @@
 //
 
 #import "XYNewViewController.h"
+#import "XYSubTagViewController.h"
+
 
 @interface XYNewViewController ()
 
@@ -34,7 +36,10 @@
 #pragma mark - 点击订阅标签调用
 - (void)tagClick
 {
-    
+    /// 进入对应的列表页面
+    XYSubTagViewController *listVC = [XYSubTagViewController new];
+    [self.navigationController pushViewController:listVC animated:YES];
+
 }
 
 @end
