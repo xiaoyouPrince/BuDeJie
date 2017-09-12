@@ -7,6 +7,7 @@
 //
 
 #import "XYProfileViewController.h"
+#import "XYSettingsViewController.h"
 
 @interface XYProfileViewController ()
 
@@ -46,7 +47,10 @@
 
 - (void)setting
 {
-    
+    /// 进入对应的列表页面
+    XYSettingsViewController *settingVc = [XYSettingsViewController new];
+    [self.navigationController pushViewController:settingVc animated:YES];
+
 }
 
 

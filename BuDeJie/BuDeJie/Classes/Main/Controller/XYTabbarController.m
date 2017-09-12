@@ -12,6 +12,7 @@
 #import "XYPublishViewController.h"
 #import "XYNewViewController.h"
 #import "XYProfileViewController.h"
+#import "XYNavigationController.h"
 #import "XYTabBar.h"
 
 @interface XYTabbarController ()
@@ -61,7 +62,7 @@
     [super viewWillAppear:animated];
     
     // 此方法中tabbar才会添加子控件
-    DLog(@"%@",self.tabBar.subviews);
+//    DLog(@"%@",self.tabBar.subviews);
 }
 
 
@@ -75,7 +76,7 @@
     // 系统 tabBar 是 readonly 不能直接赋值，但是可以使用 KVC 整体替换 tabBar 属性
     [self setValue:tabbar forKey:@"tabBar"];
     
-    DLog(@"%@",self.tabBar);
+//    DLog(@"%@",self.tabBar);
 }
 
 /**
@@ -126,9 +127,9 @@
     childVc.tabBarItem.image = [UIImage imageOriginalWithName:imageName];
     childVc.tabBarItem.selectedImage = [UIImage imageOriginalWithName:selectedImageName]; // ios7 之后
     
-    UINavigationController *nav = nil;
+    XYNavigationController *nav = nil;
 //    if (![childVc isKindOfClass:[XYPublishViewController class]]) {
-        nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+        nav = [[XYNavigationController alloc] initWithRootViewController:childVc];
         [self addChildViewController:nav];
 //    }else
 //    {

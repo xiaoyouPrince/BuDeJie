@@ -29,6 +29,10 @@
 //** 屏幕参数 ***********************************************************************************
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
+#define iPhone4 (ScreenH == 480)
+#define iPhone5 (ScreenH == 568)
+#define iPhone6 (ScreenH == 667)
+#define iPhone6P (ScreenH == 736)
 
 // 适配iphone6 所以用的它的分辨率 -- 因为标注都是按这个来的
 // 公式：x = y * k；   ----> 坐标值 = 标尺 * 比率
@@ -146,6 +150,7 @@
 # define TextAlignmentRight NSTextAlignmentRight
 
 #endif
+
 
 
 #endif /* XYKitMacro_h */

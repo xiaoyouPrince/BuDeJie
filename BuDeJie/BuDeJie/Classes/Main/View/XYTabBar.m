@@ -43,7 +43,7 @@
     
     for (UIView *view in self.subviews) {
         
-        DLog(@"%@",view);
+//        DLog(@"%@",view);
         
         if ([view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
                 

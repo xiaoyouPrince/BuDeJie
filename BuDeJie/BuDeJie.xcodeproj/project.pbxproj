@@ -23,6 +23,17 @@
 		B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */; };
 		B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */; };
 		B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */; };
+		B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47D1F67041300439EDD /* XYNavigationController.m */; };
+		B4BFC4851F67105A00439EDD /* XYSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4841F67105A00439EDD /* XYSettingsViewController.m */; };
+		B4BFC48D1F67D70F00439EDD /* XYADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC48B1F67D70F00439EDD /* XYADViewController.m */; };
+		B4BFC48E1F67D70F00439EDD /* XYADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC48C1F67D70F00439EDD /* XYADViewController.xib */; };
+		B4BFC4981F67D8ED00439EDD /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4911F67D8ED00439EDD /* LaunchImage-568h@2x.png */; };
+		B4BFC4991F67D8ED00439EDD /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4921F67D8ED00439EDD /* LaunchImage-700-568h@2x.png */; };
+		B4BFC49A1F67D8ED00439EDD /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4931F67D8ED00439EDD /* LaunchImage-700@2x.png */; };
+		B4BFC49B1F67D8ED00439EDD /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4941F67D8ED00439EDD /* LaunchImage-800-667h@2x.png */; };
+		B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4951F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png */; };
+		B4BFC49D1F67D8ED00439EDD /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4961F67D8ED00439EDD /* LaunchImage.png */; };
+		B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4971F67D8ED00439EDD /* LaunchImage@2x.png */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +90,20 @@
 		B4BFC4781F66FA9100439EDD /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		B4BFC4791F6700A100439EDD /* UIBarButtonItem+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYAdd.h"; sourceTree = "<group>"; };
 		B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYAdd.m"; sourceTree = "<group>"; };
+		B4BFC47C1F67041300439EDD /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
+		B4BFC47D1F67041300439EDD /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
+		B4BFC4831F67105A00439EDD /* XYSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSettingsViewController.h; sourceTree = "<group>"; };
+		B4BFC4841F67105A00439EDD /* XYSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSettingsViewController.m; sourceTree = "<group>"; };
+		B4BFC48A1F67D70F00439EDD /* XYADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYADViewController.h; sourceTree = "<group>"; };
+		B4BFC48B1F67D70F00439EDD /* XYADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYADViewController.m; sourceTree = "<group>"; };
+		B4BFC48C1F67D70F00439EDD /* XYADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYADViewController.xib; sourceTree = "<group>"; };
+		B4BFC4911F67D8ED00439EDD /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		B4BFC4921F67D8ED00439EDD /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		B4BFC4931F67D8ED00439EDD /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		B4BFC4941F67D8ED00439EDD /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		B4BFC4951F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		B4BFC4961F67D8ED00439EDD /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		B4BFC4971F67D8ED00439EDD /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,12 +198,15 @@
 		B496904A1F6292AA00F7A17C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B4BFC48F1F67D8CA00439EDD /* Images */,
+				B4BFC4861F67D6FB00439EDD /* AD */,
 				B49690781F62A03400F7A17C /* Main */,
 				B496904B1F6292AA00F7A17C /* Essence */,
 				B496904F1F6292AA00F7A17C /* FriendTrend */,
 				B49690631F6292AA00F7A17C /* Publish */,
 				B49690571F6292AA00F7A17C /* New */,
 				B496905F1F6292AA00F7A17C /* Profile */,
+				B4BFC47F1F67103800439EDD /* Settings */,
 				B496905B1F6292AA00F7A17C /* Other */,
 			);
 			path = Classes;
@@ -372,6 +400,8 @@
 			children = (
 				B496907C1F62A04900F7A17C /* XYTabbarController.h */,
 				B496907D1F62A04900F7A17C /* XYTabbarController.m */,
+				B4BFC47C1F67041300439EDD /* XYNavigationController.h */,
+				B4BFC47D1F67041300439EDD /* XYNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -437,6 +467,95 @@
 				B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B4BFC47F1F67103800439EDD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC4801F67103800439EDD /* Controller */,
+				B4BFC4811F67103800439EDD /* Model */,
+				B4BFC4821F67103800439EDD /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B4BFC4801F67103800439EDD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC4831F67105A00439EDD /* XYSettingsViewController.h */,
+				B4BFC4841F67105A00439EDD /* XYSettingsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4BFC4811F67103800439EDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4BFC4821F67103800439EDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4BFC4861F67D6FB00439EDD /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC4871F67D6FB00439EDD /* Controller */,
+				B4BFC4881F67D6FB00439EDD /* Model */,
+				B4BFC4891F67D6FB00439EDD /* View */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		B4BFC4871F67D6FB00439EDD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC48A1F67D70F00439EDD /* XYADViewController.h */,
+				B4BFC48B1F67D70F00439EDD /* XYADViewController.m */,
+				B4BFC48C1F67D70F00439EDD /* XYADViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4BFC4881F67D6FB00439EDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4BFC4891F67D6FB00439EDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4BFC48F1F67D8CA00439EDD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC4901F67D8ED00439EDD /* 启动图片 */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B4BFC4901F67D8ED00439EDD /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFC4911F67D8ED00439EDD /* LaunchImage-568h@2x.png */,
+				B4BFC4921F67D8ED00439EDD /* LaunchImage-700-568h@2x.png */,
+				B4BFC4931F67D8ED00439EDD /* LaunchImage-700@2x.png */,
+				B4BFC4941F67D8ED00439EDD /* LaunchImage-800-667h@2x.png */,
+				B4BFC4951F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png */,
+				B4BFC4961F67D8ED00439EDD /* LaunchImage.png */,
+				B4BFC4971F67D8ED00439EDD /* LaunchImage@2x.png */,
+			);
+			path = "启动图片";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,8 +668,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BFC48E1F67D70F00439EDD /* XYADViewController.xib in Resources */,
+				B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */,
+				B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */,
+				B4BFC4991F67D8ED00439EDD /* LaunchImage-700-568h@2x.png in Resources */,
+				B4BFC49B1F67D8ED00439EDD /* LaunchImage-800-667h@2x.png in Resources */,
+				B4BFC4981F67D8ED00439EDD /* LaunchImage-568h@2x.png in Resources */,
+				B4BFC49D1F67D8ED00439EDD /* LaunchImage.png in Resources */,
 				B49690221F62444300F7A17C /* Assets.xcassets in Resources */,
+				B4BFC49A1F67D8ED00439EDD /* LaunchImage-700@2x.png in Resources */,
 				B49690201F62444300F7A17C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,16 +704,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */,
+				B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */,
 				B496906B1F62935400F7A17C /* XYEssenceViewController.m in Sources */,
 				B496906E1F629F0B00F7A17C /* XYFriendTrendViewController.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
 				B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */,
+				B4BFC4851F67105A00439EDD /* XYSettingsViewController.m in Sources */,
 				B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
+				B4BFC48D1F67D70F00439EDD /* XYADViewController.m in Sources */,
 				B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

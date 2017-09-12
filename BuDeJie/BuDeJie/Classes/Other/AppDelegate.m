@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XYADViewController.h"
 #import "XYTabbarController.h"
 
 @interface AppDelegate ()
@@ -21,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [XYTabbarController new];
+    self.window.rootViewController = [XYADViewController new];
     
     [self.window makeKeyAndVisible];
     
