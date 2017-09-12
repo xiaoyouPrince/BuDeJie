@@ -17,6 +17,8 @@
 
 + (void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(void(^)(id json))success failure:(void(^)(NSError *error))failure;
 
++ (void)cancelAllTasks;
+
 @end
 
 

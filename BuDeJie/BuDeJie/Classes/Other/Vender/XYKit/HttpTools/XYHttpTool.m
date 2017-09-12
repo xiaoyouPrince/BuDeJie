@@ -9,12 +9,14 @@
 #import "XYHttpTool.h"
 #import "AFNetworking.h"
 
+static AFHTTPSessionManager *manager = nil;
+
 @implementation XYHttpTool
 
 + (void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(void(^)(id))success failure:(void(^)(NSError *error))failure
 {
     // 1.创建管理者
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager = [AFHTTPSessionManager manager];
     
     // 2.发送请求
     [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -37,7 +39,7 @@
 + (void)postWithURL:(NSString *)url params:(NSDictionary *)params formData:(NSArray *)formDataArray success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     // 1.创建管理者
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager = [AFHTTPSessionManager manager];
     
     // 2.发送请求
     [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull totalFormData) {
@@ -61,7 +63,7 @@
 + (void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     // 1.创建管理者
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager = [AFHTTPSessionManager manager];
     
     // 2.发送请求
     [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -76,6 +78,10 @@
     
 }
 
++ (void)cancelAllTasks
+{
+    [manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+}
 
 
 

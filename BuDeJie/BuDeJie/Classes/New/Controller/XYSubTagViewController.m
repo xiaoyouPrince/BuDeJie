@@ -32,16 +32,29 @@ static NSString * const ID = @"subTagCell";
     self.tableView.backgroundColor = XYColor(220, 220, 221);
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
+    
+    [XYHttpTool cancelAllTasks];
+}
+
 - (void)loadData
 {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"tag_recommend";
     parameters[@"action"] = @"sub";
     parameters[@"c"] = @"topic";
+    
+    [SVProgressHUD showWithStatus:@"正在加载"];
     [XYHttpTool getWithURL:@"http://api.budejie.com/api/api_open.php" params:parameters success:^(id json) {
         
         _subTags = [XYSubTagItem mj_objectArrayWithKeyValuesArray:json];
         
+        
+        [SVProgressHUD dismiss];
         // 刷新表格
         [self.tableView reloadData];
     } failure:^(NSError *error) {
