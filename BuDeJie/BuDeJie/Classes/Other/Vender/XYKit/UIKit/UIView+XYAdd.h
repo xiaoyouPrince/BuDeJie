@@ -15,6 +15,8 @@
 @property CGFloat xy_y;
 @property CGFloat xy_width;
 @property CGFloat xy_height;
+@property CGFloat xy_centerX;
+@property CGFloat xy_centerY;
 @property CGPoint xy_origin;
 @property CGSize  xy_size;
 #pragma mark --- frame相关

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYLoginAndRegistViewController">
             <connections>
+                <outlet property="bottomView" destination="bwc-Nk-OhO" id="Tfa-eH-iB5"/>
                 <outlet property="midView" destination="Jx9-1l-odV" id="aoO-ph-uxi"/>
                 <outlet property="midViewLeadingCons" destination="NRI-O8-y9E" id="ZgO-q6-WKz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -66,7 +67,6 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwc-Nk-OhO" userLabel="bottomView">
                     <rect key="frame" x="0.0" y="517" width="375" height="150"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="KU7-hi-Vej"/>
                     </constraints>

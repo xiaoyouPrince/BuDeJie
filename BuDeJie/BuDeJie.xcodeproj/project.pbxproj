@@ -27,6 +27,9 @@
 		B4B020B71F68E051005A9F39 /* XYLoginAndRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020B51F68E051005A9F39 /* XYLoginAndRegistViewController.xib */; };
 		B4B020BA1F68E41F005A9F39 /* XYLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020B91F68E41F005A9F39 /* XYLoginView.m */; };
 		B4B020BC1F68E429005A9F39 /* XYLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020BB1F68E429005A9F39 /* XYLoginView.xib */; };
+		B4B020BF1F690A40005A9F39 /* XYFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020BE1F690A40005A9F39 /* XYFastLoginView.m */; };
+		B4B020C11F690A4C005A9F39 /* XYFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020C01F690A4C005A9F39 /* XYFastLoginView.xib */; };
+		B4B020C41F690CBA005A9F39 /* XYFastBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020C31F690CBA005A9F39 /* XYFastBtn.m */; };
 		B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */; };
 		B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */; };
 		B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47D1F67041300439EDD /* XYNavigationController.m */; };
@@ -107,6 +110,11 @@
 		B4B020B81F68E41F005A9F39 /* XYLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginView.h; sourceTree = "<group>"; };
 		B4B020B91F68E41F005A9F39 /* XYLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginView.m; sourceTree = "<group>"; };
 		B4B020BB1F68E429005A9F39 /* XYLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLoginView.xib; sourceTree = "<group>"; };
+		B4B020BD1F690A40005A9F39 /* XYFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFastLoginView.h; sourceTree = "<group>"; };
+		B4B020BE1F690A40005A9F39 /* XYFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFastLoginView.m; sourceTree = "<group>"; };
+		B4B020C01F690A4C005A9F39 /* XYFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYFastLoginView.xib; sourceTree = "<group>"; };
+		B4B020C21F690CBA005A9F39 /* XYFastBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFastBtn.h; sourceTree = "<group>"; };
+		B4B020C31F690CBA005A9F39 /* XYFastBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFastBtn.m; sourceTree = "<group>"; };
 		B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
 		B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		B4BFC4781F66FA9100439EDD /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
@@ -332,6 +340,11 @@
 				B4B020B81F68E41F005A9F39 /* XYLoginView.h */,
 				B4B020B91F68E41F005A9F39 /* XYLoginView.m */,
 				B4B020BB1F68E429005A9F39 /* XYLoginView.xib */,
+				B4B020BD1F690A40005A9F39 /* XYFastLoginView.h */,
+				B4B020BE1F690A40005A9F39 /* XYFastLoginView.m */,
+				B4B020C01F690A4C005A9F39 /* XYFastLoginView.xib */,
+				B4B020C21F690CBA005A9F39 /* XYFastBtn.h */,
+				B4B020C31F690CBA005A9F39 /* XYFastBtn.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -758,6 +771,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B020C11F690A4C005A9F39 /* XYFastLoginView.xib in Resources */,
 				B4BFC48E1F67D70F00439EDD /* XYADViewController.xib in Resources */,
 				B4B020B21F68C8CE005A9F39 /* XYFriendTrendViewController.xib in Resources */,
 				B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -851,8 +865,10 @@
 				B4BFC4A51F68388E00439EDD /* XYRequestParam.m in Sources */,
 				B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */,
 				B496906B1F62935400F7A17C /* XYEssenceViewController.m in Sources */,
+				B4B020C41F690CBA005A9F39 /* XYFastBtn.m in Sources */,
 				B496906E1F629F0B00F7A17C /* XYFriendTrendViewController.m in Sources */,
 				B4BFC4AD1F68490500439EDD /* XYSubTagViewController.m in Sources */,
+				B4B020BF1F690A40005A9F39 /* XYFastLoginView.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
 				B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */,
 				B4BFC4A21F6837BC00439EDD /* XYHttpTool.m in Sources */,

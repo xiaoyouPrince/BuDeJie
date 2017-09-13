@@ -36,6 +36,31 @@
     return self.frame.origin.y;
 }
 
+- (void)setXy_centerX:(CGFloat)xy_centerX
+{
+    CGPoint center = self.center;
+    center.x = xy_centerX;
+    self.center = center;
+}
+
+- (CGFloat)xy_centerX
+{
+    return self.center.x;
+}
+
+- (void)setXy_centerY:(CGFloat)xy_centerY
+{
+    CGPoint center = self.center;
+    center.y = xy_centerY;
+    self.center = center;
+}
+
+
+- (CGFloat)xy_centerY
+{
+    return self.center.y;
+}
+
 - (void)setXy_width:(CGFloat)xy_width
 {
     CGRect frame = self.frame;
