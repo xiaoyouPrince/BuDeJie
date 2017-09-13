@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
+//    self.view.backgroundColor = [UIColor greenColor];
+    
+    
+    /// 这里需要判断是否登录状态进行展示对应的页面
+    
     
     [self setupNavBar];
 }
@@ -34,6 +38,15 @@
 // 推荐关注
 - (void)friendsRecomment
 {
+    
+}
+
+
+/**
+ 点击登录注册按钮
+ */
+- (IBAction)clickLoginAndRegister:(id)sender {
+    
     
 }
 

@@ -37,7 +37,6 @@ static NSString * const ID = @"subTagCell";
     [super viewWillDisappear:animated];
     
     [SVProgressHUD dismiss];
-    
     [XYHttpTool cancelAllTasks];
 }
 

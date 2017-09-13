@@ -22,6 +22,7 @@
 		B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49690761F629FE400F7A17C /* XYProfileViewController.m */; };
 		B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496907D1F62A04900F7A17C /* XYTabbarController.m */; };
 		B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */; };
+		B4B020B21F68C8CE005A9F39 /* XYFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020B11F68C8CE005A9F39 /* XYFriendTrendViewController.xib */; };
 		B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */; };
 		B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */; };
 		B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47D1F67041300439EDD /* XYNavigationController.m */; };
@@ -95,6 +96,7 @@
 		B49E6EC11F630D2D00826DF9 /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
 		B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
 		B49E6EC41F630D7000826DF9 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B4B020B11F68C8CE005A9F39 /* XYFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYFriendTrendViewController.xib; sourceTree = "<group>"; };
 		B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
 		B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		B4BFC4781F66FA9100439EDD /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
@@ -241,9 +243,9 @@
 				B4BFC4861F67D6FB00439EDD /* AD */,
 				B49690781F62A03400F7A17C /* Main */,
 				B496904B1F6292AA00F7A17C /* Essence */,
-				B496904F1F6292AA00F7A17C /* FriendTrend */,
-				B49690631F6292AA00F7A17C /* Publish */,
 				B49690571F6292AA00F7A17C /* New */,
+				B49690631F6292AA00F7A17C /* Publish */,
+				B496904F1F6292AA00F7A17C /* FriendTrend */,
 				B496905F1F6292AA00F7A17C /* Profile */,
 				B4BFC47F1F67103800439EDD /* Settings */,
 				B496905B1F6292AA00F7A17C /* Other */,
@@ -299,6 +301,7 @@
 			children = (
 				B496906C1F629F0B00F7A17C /* XYFriendTrendViewController.h */,
 				B496906D1F629F0B00F7A17C /* XYFriendTrendViewController.m */,
+				B4B020B11F68C8CE005A9F39 /* XYFriendTrendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4BFC48E1F67D70F00439EDD /* XYADViewController.xib in Resources */,
+				B4B020B21F68C8CE005A9F39 /* XYFriendTrendViewController.xib in Resources */,
 				B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */,
 				B4BFC4AA1F683EE600439EDD /* ad.plist in Resources */,
