@@ -105,7 +105,8 @@
                          imageName:@"tabBar_friendTrends_icon"
                  selectedImageName:@"tabBar_friendTrends_click_icon"];
     
-    XYProfileViewController *profileVc = [XYProfileViewController new];
+    UIStoryboard *profile = [UIStoryboard storyboardWithName:@"XYProfileViewController" bundle:nil];
+    XYProfileViewController *profileVc = [profile instantiateInitialViewController];
     [self setupChildViewController:profileVc title:@"我"
                          imageName:@"tabBar_me_icon"
                  selectedImageName:@"tabBar_me_click_icon"];

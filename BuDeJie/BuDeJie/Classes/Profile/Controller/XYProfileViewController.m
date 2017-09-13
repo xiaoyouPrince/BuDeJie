@@ -8,8 +8,20 @@
 
 #import "XYProfileViewController.h"
 #import "XYSettingsViewController.h"
+#import "XYSquareItem.h"
+#import "XYSquareCell.h"
 
-@interface XYProfileViewController ()
+static NSInteger const clos = 4;
+static CGFloat const margin = 1;
+#define cellWH (ScreenW - (clos - 1) * margin ) / clos
+
+
+@interface XYProfileViewController ()<UICollectionViewDataSource>
+
+@property(nonatomic,weak) UICollectionView *collectionView;
+
+/// 数据
+@property (nonatomic, strong) NSMutableArray *squareItems;
 
 @end
 
@@ -20,6 +32,11 @@
     // 设置导航条
     [self setupNavBar];
     
+    // 设置footerView
+    [self setupTableFooterView];
+    
+    // 请求数据
+    [self loadData];
 }
 
 - (void)setupNavBar
@@ -53,17 +70,75 @@
 
 }
 
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (void)setupTableFooterView
+{
+    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    
+    layout.itemSize = CGSizeMake(cellWH, cellWH);
+    layout.minimumLineSpacing = margin;
+    layout.minimumInteritemSpacing = margin;
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:layout];
+    [collectionView registerNib:[UINib nibWithNibName:@"XYSquareCell" bundle:nil] forCellWithReuseIdentifier:XYSquareCellID];
+    collectionView.dataSource = self;
+    collectionView.collectionViewLayout = layout;
+    collectionView.backgroundColor = self.tableView.backgroundColor;
+    collectionView.scrollEnabled = NO;
+    _collectionView = collectionView;
+    
+    self.tableView.tableFooterView = collectionView;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (void)loadData
+{
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"square";
+    parameters[@"c"] = @"topic";
+    
+    [XYHttpTool getWithURL:@"http://api.budejie.com/api/api_open.php" params:parameters success:^(id json) {
+        
+        NSArray *list = json[@"square_list"];
+        
+        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:list];
+        
+        [self resolveData];
+        
+        // 重新设置CollectionView的高度
+        NSInteger count = self.squareItems.count;
+        CGFloat rows = (count - 1) / clos + 1;
+        self.collectionView.xy_height = rows * cellWH;
+        
+        self.tableView.tableFooterView = self.collectionView;
+        
+        
+        [_collectionView reloadData];
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+- (void)resolveData
+{
+    //
+}
+
+
+#pragma mark -- UICollectionView Data Source
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return _squareItems.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    XYSquareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XYSquareCellID forIndexPath:indexPath];
+    
+    cell.model = _squareItems[indexPath.row];
+    
+    return cell;
 }
 
 

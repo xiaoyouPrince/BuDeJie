@@ -40,4 +40,13 @@
  */
 + (UIImage *)resiedImageWithName:(NSString *)name left:(CGFloat )left top:(CGFloat)top;
 
+
+/**
+ 根据颜色生成一张图片
+
+ @param color 颜色
+ @return 1*1 图片
+ */
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end

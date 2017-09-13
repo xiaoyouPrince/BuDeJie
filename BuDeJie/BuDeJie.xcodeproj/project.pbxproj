@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A80A3B02550C0CFE93E52959 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99362A586CAA721F05422AC9 /* libPods-BuDeJie.a */; };
+		B46BFD491F696A450056C1A5 /* XYProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46BFD481F696A450056C1A5 /* XYProfileViewController.storyboard */; };
+		B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD4B1F696E900056C1A5 /* XYSquareCell.m */; };
+		B46BFD4E1F696E900056C1A5 /* XYSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46BFD4C1F696E900056C1A5 /* XYSquareCell.xib */; };
+		B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD501F6974B10056C1A5 /* XYSquareItem.m */; };
 		B49690201F62444300F7A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B496901E1F62444300F7A17C /* Main.storyboard */; };
 		B49690221F62444300F7A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49690211F62444300F7A17C /* Assets.xcassets */; };
 		B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49690231F62444300F7A17C /* LaunchScreen.storyboard */; };
@@ -75,6 +79,12 @@
 
 /* Begin PBXFileReference section */
 		99362A586CAA721F05422AC9 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46BFD481F696A450056C1A5 /* XYProfileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XYProfileViewController.storyboard; sourceTree = "<group>"; };
+		B46BFD4A1F696E900056C1A5 /* XYSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSquareCell.h; sourceTree = "<group>"; };
+		B46BFD4B1F696E900056C1A5 /* XYSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSquareCell.m; sourceTree = "<group>"; };
+		B46BFD4C1F696E900056C1A5 /* XYSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYSquareCell.xib; sourceTree = "<group>"; };
+		B46BFD4F1F6974B10056C1A5 /* XYSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSquareItem.h; sourceTree = "<group>"; };
+		B46BFD501F6974B10056C1A5 /* XYSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSquareItem.m; sourceTree = "<group>"; };
 		B49690121F62444300F7A17C /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B496901F1F62444300F7A17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B49690211F62444300F7A17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -420,6 +430,7 @@
 			children = (
 				B49690751F629FE400F7A17C /* XYProfileViewController.h */,
 				B49690761F629FE400F7A17C /* XYProfileViewController.m */,
+				B46BFD481F696A450056C1A5 /* XYProfileViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,6 +438,8 @@
 		B49690611F6292AA00F7A17C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B46BFD4F1F6974B10056C1A5 /* XYSquareItem.h */,
+				B46BFD501F6974B10056C1A5 /* XYSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,6 +447,9 @@
 		B49690621F6292AA00F7A17C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B46BFD4A1F696E900056C1A5 /* XYSquareCell.h */,
+				B46BFD4B1F696E900056C1A5 /* XYSquareCell.m */,
+				B46BFD4C1F696E900056C1A5 /* XYSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -791,10 +807,12 @@
 				B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */,
 				B4BFC4991F67D8ED00439EDD /* LaunchImage-700-568h@2x.png in Resources */,
 				B4BFC49B1F67D8ED00439EDD /* LaunchImage-800-667h@2x.png in Resources */,
+				B46BFD491F696A450056C1A5 /* XYProfileViewController.storyboard in Resources */,
 				B4B020B71F68E051005A9F39 /* XYLoginAndRegistViewController.xib in Resources */,
 				B4BFC4981F67D8ED00439EDD /* LaunchImage-568h@2x.png in Resources */,
 				B4BFC4B51F684AC100439EDD /* XYSubTagCell.xib in Resources */,
 				B4BFC49D1F67D8ED00439EDD /* LaunchImage.png in Resources */,
+				B46BFD4E1F696E900056C1A5 /* XYSquareCell.xib in Resources */,
 				B49690221F62444300F7A17C /* Assets.xcassets in Resources */,
 				B4BFC49A1F67D8ED00439EDD /* LaunchImage-700@2x.png in Resources */,
 				B49690201F62444300F7A17C /* Main.storyboard in Resources */,
@@ -889,9 +907,11 @@
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
 				B4B020B61F68E051005A9F39 /* XYLoginAndRegistViewController.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
+				B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
 				B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */,
+				B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,
 				B4B020BA1F68E41F005A9F39 /* XYLoginView.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
