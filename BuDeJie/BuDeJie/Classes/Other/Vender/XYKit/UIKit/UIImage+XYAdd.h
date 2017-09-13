@@ -19,4 +19,25 @@
  */
 + (UIImage *)imageOriginalWithName:(NSString *)imageName;
 
+/**
+ *  返回一张适配后的图片
+ */
++ (UIImage *)imageWithName:(NSString *)name;
+
+/**
+ *  返回一张自由拉伸的图片
+ */
++ (UIImage *)resiedImageWithName:(NSString *)name;
+
+
+/**
+ 返回一张根据左上边距拉伸的图片
+
+ @param name 图片名
+ @param left 左边比例
+ @param top 上边比例
+ @return 拉伸后的图
+ */
++ (UIImage *)resiedImageWithName:(NSString *)name left:(CGFloat )left top:(CGFloat)top;
+
 @end

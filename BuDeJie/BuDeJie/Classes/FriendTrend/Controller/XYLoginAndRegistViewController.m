@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *midViewLeadingCons;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 
-
 @end
 
 @implementation XYLoginAndRegistViewController

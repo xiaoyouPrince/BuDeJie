@@ -8,8 +8,13 @@
 
 #import "XYFriendTrendViewController.h"
 #import "XYLoginAndRegistViewController.h"
+#import "XYTextField.h"
 
 @interface XYFriendTrendViewController ()
+
+
+@property (weak, nonatomic) IBOutlet XYTextField *textfield;
+
 
 @end
 
@@ -20,6 +25,9 @@
 //    self.view.backgroundColor = [UIColor greenColor];
     
     /// 这里需要判断是否登录状态进行展示对应的页面
+    self.textfield.placeholderColor = [UIColor yellowColor];
+
+    self.textfield.placeholder = @"sadfasdf";
     
     
     [self setupNavBar];

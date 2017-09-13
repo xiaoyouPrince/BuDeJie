@@ -30,6 +30,8 @@
 		B4B020BF1F690A40005A9F39 /* XYFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020BE1F690A40005A9F39 /* XYFastLoginView.m */; };
 		B4B020C11F690A4C005A9F39 /* XYFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020C01F690A4C005A9F39 /* XYFastLoginView.xib */; };
 		B4B020C41F690CBA005A9F39 /* XYFastBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020C31F690CBA005A9F39 /* XYFastBtn.m */; };
+		B4B020C71F692A27005A9F39 /* XYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020C61F692A27005A9F39 /* XYTextField.m */; };
+		B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020C91F6934D0005A9F39 /* UITextField+XYAdd.m */; };
 		B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */; };
 		B4BFC47B1F6700A100439EDD /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */; };
 		B4BFC47E1F67041300439EDD /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC47D1F67041300439EDD /* XYNavigationController.m */; };
@@ -115,6 +117,10 @@
 		B4B020C01F690A4C005A9F39 /* XYFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYFastLoginView.xib; sourceTree = "<group>"; };
 		B4B020C21F690CBA005A9F39 /* XYFastBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFastBtn.h; sourceTree = "<group>"; };
 		B4B020C31F690CBA005A9F39 /* XYFastBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFastBtn.m; sourceTree = "<group>"; };
+		B4B020C51F692A27005A9F39 /* XYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTextField.h; sourceTree = "<group>"; };
+		B4B020C61F692A27005A9F39 /* XYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTextField.m; sourceTree = "<group>"; };
+		B4B020C81F6934D0005A9F39 /* UITextField+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XYAdd.h"; sourceTree = "<group>"; };
+		B4B020C91F6934D0005A9F39 /* UITextField+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XYAdd.m"; sourceTree = "<group>"; };
 		B4BFC4751F66F69400439EDD /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
 		B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		B4BFC4781F66FA9100439EDD /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
@@ -345,6 +351,8 @@
 				B4B020C01F690A4C005A9F39 /* XYFastLoginView.xib */,
 				B4B020C21F690CBA005A9F39 /* XYFastBtn.h */,
 				B4B020C31F690CBA005A9F39 /* XYFastBtn.m */,
+				B4B020C51F692A27005A9F39 /* XYTextField.h */,
+				B4B020C61F692A27005A9F39 /* XYTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,6 +552,8 @@
 				B4BFC4761F66F69400439EDD /* UIView+XYAdd.m */,
 				B4BFC4791F6700A100439EDD /* UIBarButtonItem+XYAdd.h */,
 				B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */,
+				B4B020C81F6934D0005A9F39 /* UITextField+XYAdd.h */,
+				B4B020C91F6934D0005A9F39 /* UITextField+XYAdd.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -870,6 +880,7 @@
 				B4BFC4AD1F68490500439EDD /* XYSubTagViewController.m in Sources */,
 				B4B020BF1F690A40005A9F39 /* XYFastLoginView.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
+				B4B020C71F692A27005A9F39 /* XYTextField.m in Sources */,
 				B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */,
 				B4BFC4A21F6837BC00439EDD /* XYHttpTool.m in Sources */,
 				B4BFC4851F67105A00439EDD /* XYSettingsViewController.m in Sources */,
@@ -880,6 +891,7 @@
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
+				B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,
 				B4B020BA1F68E41F005A9F39 /* XYLoginView.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
