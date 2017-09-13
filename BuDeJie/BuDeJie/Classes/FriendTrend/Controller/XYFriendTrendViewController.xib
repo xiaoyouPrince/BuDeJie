@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYFriendTrendViewController">
             <connections>
-                <outlet property="textfield" destination="aUF-Cp-mJt" id="yAl-Jb-8ij"/>
                 <outlet property="view" destination="iN0-l3-epB" id="h4i-qn-xe0"/>
             </connections>
         </placeholder>
@@ -36,13 +35,6 @@
                         <constraint firstAttribute="width" constant="48" id="z0l-iR-sre"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUF-Cp-mJt" customClass="XYTextField">
-                    <rect key="frame" x="126" y="110" width="97" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3U-I5-UOn">
                     <rect key="frame" x="60" y="378" width="255" height="35"/>
                     <constraints>

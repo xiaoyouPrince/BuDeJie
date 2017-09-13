@@ -12,23 +12,12 @@
 
 @interface XYFriendTrendViewController ()
 
-
-@property (weak, nonatomic) IBOutlet XYTextField *textfield;
-
-
 @end
 
 @implementation XYFriendTrendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor greenColor];
-    
-    /// 这里需要判断是否登录状态进行展示对应的页面
-    self.textfield.placeholderColor = [UIColor yellowColor];
-
-    self.textfield.placeholder = @"sadfasdf";
-    
     
     [self setupNavBar];
 }

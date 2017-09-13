@@ -12,6 +12,7 @@
 
 @property UIColor *placeholderColor;
 
+- (void)set_xy_placeHolder:(NSString *)placeHolder;
 
 
 @end
