@@ -29,14 +29,17 @@ static CGFloat const margin = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     // 设置导航条
     [self setupNavBar];
     
-    // 设置footerView
-    [self setupTableFooterView];
+    [self configTableView];
     
     // 请求数据
     [self loadData];
+    
+    //
 }
 
 - (void)setupNavBar
@@ -54,6 +57,17 @@ static CGFloat const margin = 1;
     // titleView
     self.navigationItem.title = @"我的";
     
+}
+
+- (void)configTableView
+{
+    // 设置footerView
+    [self setupTableFooterView];
+    
+    // 设置tableView 的cell间距和
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = 10;
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0); // 这里上移25，viewAppear的时候系统会增加64
 }
 
 - (void)night:(UIButton *)button
@@ -102,16 +116,16 @@ static CGFloat const margin = 1;
         
         _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:list];
         
+        // 处理数据
         [self resolveData];
         
         // 重新设置CollectionView的高度
         NSInteger count = self.squareItems.count;
         CGFloat rows = (count - 1) / clos + 1;
         self.collectionView.xy_height = rows * cellWH;
-        
         self.tableView.tableFooterView = self.collectionView;
         
-        
+        // 刷新数据
         [_collectionView reloadData];
         
     } failure:^(NSError *error) {
@@ -119,9 +133,21 @@ static CGFloat const margin = 1;
     }];
 }
 
+
+/**
+ 处理数据，用空数据补充缺少的数据，效果更好看
+ */
 - (void)resolveData
 {
     //
+    NSInteger count = self.squareItems.count;
+    if (count) {
+        // 计算缺少几个数据。
+        NSInteger exter = clos - (count % clos);
+        for (int i = 0; i < exter; i++) {
+            [self.squareItems addObject:[XYSquareItem new]];
+        }
+    }
 }
 
 

@@ -28,7 +28,9 @@
 {
     _model = model;
     
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:model.icon] placeholderImage:[UIImage imageWithColor:XYRandomColor]];
+    if (model.icon.length) {
+        [_iconView sd_setImageWithURL:[NSURL URLWithString:model.icon] placeholderImage:[UIImage imageWithColor:XYRandomColor]];
+    }
     _nameLabel.text = model.name;
 }
 
