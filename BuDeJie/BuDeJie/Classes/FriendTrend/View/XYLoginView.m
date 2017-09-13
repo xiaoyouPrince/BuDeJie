@@ -8,14 +8,30 @@
 
 #import "XYLoginView.h"
 
+@interface XYLoginView ()
+
+
+@end
+
 @implementation XYLoginView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
++ (instancetype)loginView{
+    
+    return [[NSBundle mainBundle] loadNibNamed:@"XYLoginView" owner:nil options:nil].firstObject;
+    
 }
-*/
+
++ (instancetype)registerView{
+    return [[NSBundle mainBundle] loadNibNamed:@"XYLoginView" owner:nil options:nil].lastObject;
+}
+
+
+
+- (IBAction)loginBtnCLick:(id)sender {
+}
+
+- (IBAction)forgetPassBtnClick:(id)sender {
+}
 
 @end

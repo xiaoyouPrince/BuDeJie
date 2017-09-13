@@ -10,4 +10,8 @@
 
 @interface XYLoginView : UIView
 
++ (instancetype)loginView;
+
++ (instancetype)registerView;
+
 @end

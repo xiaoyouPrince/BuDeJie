@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYLoginAndRegistViewController">
             <connections>
                 <outlet property="midView" destination="Jx9-1l-odV" id="aoO-ph-uxi"/>
+                <outlet property="midViewLeadingCons" destination="NRI-O8-y9E" id="ZgO-q6-WKz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,7 +59,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-1l-odV" userLabel="midView">
-                    <rect key="frame" x="0.0" y="75" width="375" height="240"/>
+                    <rect key="frame" x="0.0" y="75" width="750" height="240"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="240" id="GLQ-3l-mcN"/>
                     </constraints>
@@ -76,14 +78,14 @@
                 <constraint firstAttribute="trailing" secondItem="Ais-uI-hdP" secondAttribute="trailing" id="22S-Qb-doh"/>
                 <constraint firstItem="QCy-3x-Snx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="3p9-r7-zvh"/>
                 <constraint firstAttribute="bottom" secondItem="Ais-uI-hdP" secondAttribute="bottom" id="Bpw-S0-HiJ"/>
+                <constraint firstItem="Jx9-1l-odV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NRI-O8-y9E"/>
                 <constraint firstAttribute="bottom" secondItem="bwc-Nk-OhO" secondAttribute="bottom" id="Sbz-G4-gWU"/>
                 <constraint firstItem="Ais-uI-hdP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WBK-Bn-3VK"/>
                 <constraint firstItem="Ais-uI-hdP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="alc-hk-hpv"/>
-                <constraint firstAttribute="trailing" secondItem="Jx9-1l-odV" secondAttribute="trailing" id="bKf-W0-vnx"/>
                 <constraint firstItem="QCy-3x-Snx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fya-uc-OmC"/>
                 <constraint firstAttribute="trailing" secondItem="bwc-Nk-OhO" secondAttribute="trailing" id="hfF-SQ-OHa"/>
                 <constraint firstItem="Jx9-1l-odV" firstAttribute="top" secondItem="QCy-3x-Snx" secondAttribute="bottom" constant="20" id="lkv-wD-zhg"/>
-                <constraint firstItem="Jx9-1l-odV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rV2-1j-27u"/>
+                <constraint firstItem="Jx9-1l-odV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="2" id="p2X-SF-7gS"/>
                 <constraint firstAttribute="trailing" secondItem="QCy-3x-Snx" secondAttribute="trailing" id="uSp-F7-fzs"/>
             </constraints>
             <point key="canvasLocation" x="43.5" y="54.5"/>
