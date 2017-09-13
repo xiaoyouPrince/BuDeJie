@@ -7,6 +7,7 @@
 //
 
 #import "XYFriendTrendViewController.h"
+#import "XYLoginAndRegistViewController.h"
 
 @interface XYFriendTrendViewController ()
 
@@ -17,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor greenColor];
-    
     
     /// 这里需要判断是否登录状态进行展示对应的页面
     
@@ -47,6 +47,10 @@
  */
 - (IBAction)clickLoginAndRegister:(id)sender {
     
+    /// 进入对应的列表页面
+    XYLoginAndRegistViewController *loginVC = [XYLoginAndRegistViewController new];
+    [self presentViewController:loginVC animated:YES completion:nil];
+
     
 }
 
