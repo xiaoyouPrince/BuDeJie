@@ -12,6 +12,8 @@
 		B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD4B1F696E900056C1A5 /* XYSquareCell.m */; };
 		B46BFD4E1F696E900056C1A5 /* XYSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46BFD4C1F696E900056C1A5 /* XYSquareCell.xib */; };
 		B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD501F6974B10056C1A5 /* XYSquareItem.m */; };
+		B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD531F6A2B4F0056C1A5 /* XYWebViewController.m */; };
+		B46BFD561F6A2B4F0056C1A5 /* XYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */; };
 		B49690201F62444300F7A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B496901E1F62444300F7A17C /* Main.storyboard */; };
 		B49690221F62444300F7A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49690211F62444300F7A17C /* Assets.xcassets */; };
 		B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49690231F62444300F7A17C /* LaunchScreen.storyboard */; };
@@ -85,6 +87,9 @@
 		B46BFD4C1F696E900056C1A5 /* XYSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYSquareCell.xib; sourceTree = "<group>"; };
 		B46BFD4F1F6974B10056C1A5 /* XYSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSquareItem.h; sourceTree = "<group>"; };
 		B46BFD501F6974B10056C1A5 /* XYSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSquareItem.m; sourceTree = "<group>"; };
+		B46BFD521F6A2B4F0056C1A5 /* XYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWebViewController.h; sourceTree = "<group>"; };
+		B46BFD531F6A2B4F0056C1A5 /* XYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWebViewController.m; sourceTree = "<group>"; };
+		B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYWebViewController.xib; sourceTree = "<group>"; };
 		B49690121F62444300F7A17C /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B496901F1F62444300F7A17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B49690211F62444300F7A17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -431,6 +436,9 @@
 				B49690751F629FE400F7A17C /* XYProfileViewController.h */,
 				B49690761F629FE400F7A17C /* XYProfileViewController.m */,
 				B46BFD481F696A450056C1A5 /* XYProfileViewController.storyboard */,
+				B46BFD521F6A2B4F0056C1A5 /* XYWebViewController.h */,
+				B46BFD531F6A2B4F0056C1A5 /* XYWebViewController.m */,
+				B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -807,6 +815,7 @@
 				B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */,
 				B4BFC4991F67D8ED00439EDD /* LaunchImage-700-568h@2x.png in Resources */,
 				B4BFC49B1F67D8ED00439EDD /* LaunchImage-800-667h@2x.png in Resources */,
+				B46BFD561F6A2B4F0056C1A5 /* XYWebViewController.xib in Resources */,
 				B46BFD491F696A450056C1A5 /* XYProfileViewController.storyboard in Resources */,
 				B4B020B71F68E051005A9F39 /* XYLoginAndRegistViewController.xib in Resources */,
 				B4BFC4981F67D8ED00439EDD /* LaunchImage-568h@2x.png in Resources */,
@@ -910,6 +919,7 @@
 				B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
+				B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */,
 				B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */,
 				B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,

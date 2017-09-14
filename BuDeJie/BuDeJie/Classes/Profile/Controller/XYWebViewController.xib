@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYWebViewController">
+            <connections>
+                <outlet property="backItem" destination="Mde-KT-nqF" id="m8H-Af-u3O"/>
+                <outlet property="containerView" destination="2CC-Uf-zaj" id="WdB-Pz-gvX"/>
+                <outlet property="nextItem" destination="YPX-2t-e5o" id="0my-HG-ZiH"/>
+                <outlet property="progressView" destination="xfa-pG-ymD" id="GV7-10-KnW"/>
+                <outlet property="refreshItem" destination="E53-l2-ulP" id="F3Z-gJ-qrB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CC-Uf-zaj" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <subviews>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-pG-ymD">
+                            <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="unN-oe-GmI"/>
+                            </constraints>
+                        </progressView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="xfa-pG-ymD" firstAttribute="leading" secondItem="2CC-Uf-zaj" secondAttribute="leading" id="Kwz-oo-G3J"/>
+                        <constraint firstItem="xfa-pG-ymD" firstAttribute="top" secondItem="2CC-Uf-zaj" secondAttribute="top" constant="64" id="Rel-Mz-Xw7"/>
+                        <constraint firstAttribute="trailing" secondItem="xfa-pG-ymD" secondAttribute="trailing" id="u1o-WJ-liB"/>
+                    </constraints>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8U-2Q-x2n">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ffj-Io-qwM"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem image="go_back" id="Mde-KT-nqF" userLabel="backItem">
+                            <connections>
+                                <action selector="backItemClick:" destination="-1" id="fJs-2L-Ua2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="go_next" id="YPX-2t-e5o" userLabel="nextItem">
+                            <connections>
+                                <action selector="nextItemClick:" destination="-1" id="P15-cc-3mJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nb9-jt-WYX"/>
+                        <barButtonItem systemItem="refresh" id="E53-l2-ulP">
+                            <connections>
+                                <action selector="refreshItemClick:" destination="-1" id="B4m-an-XwI"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="W8U-2Q-x2n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="077-lp-BJQ"/>
+                <constraint firstAttribute="trailing" secondItem="W8U-2Q-x2n" secondAttribute="trailing" id="0KW-Fh-7mi"/>
+                <constraint firstAttribute="trailing" secondItem="2CC-Uf-zaj" secondAttribute="trailing" id="K6i-BI-Nff"/>
+                <constraint firstItem="2CC-Uf-zaj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TTs-cT-XVZ"/>
+                <constraint firstItem="W8U-2Q-x2n" firstAttribute="top" secondItem="2CC-Uf-zaj" secondAttribute="bottom" id="hAw-ua-a2s"/>
+                <constraint firstAttribute="bottom" secondItem="W8U-2Q-x2n" secondAttribute="bottom" id="nvw-mn-eaM"/>
+                <constraint firstItem="2CC-Uf-zaj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tG0-jP-UWh"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="go_back" width="30" height="30"/>
+        <image name="go_next" width="30" height="30"/>
+    </resources>
+</document>

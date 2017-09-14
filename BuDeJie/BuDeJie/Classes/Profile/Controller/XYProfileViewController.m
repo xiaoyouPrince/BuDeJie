@@ -10,8 +10,7 @@
 #import "XYSettingsViewController.h"
 #import "XYSquareItem.h"
 #import "XYSquareCell.h"
-#import <SafariServices/SafariServices.h>
-#import <WebKit/WebKit.h>
+#import "XYWebViewController.h"
 
 static NSInteger const clos = 4;
 static CGFloat const margin = 1;
@@ -181,11 +180,12 @@ static CGFloat const margin = 1;
     
     if (!([item.url hasPrefix:@"http://"] || [item.url hasPrefix:@"https://"])) return;
     
-    SFSafariViewController *safariVc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:item.url] entersReaderIfAvailable:NO];
-//    [self.navigationController pushViewController:safariVc animated:YES];
-    [self presentViewController:safariVc animated:YES completion:nil];
 
-//    WKWebView *web = [ui];
+    /// 进入对应的列表页面
+    XYWebViewController *webVC = [XYWebViewController new];
+    webVC.url = item.url;
+    [self.navigationController pushViewController:webVC animated:YES];
+
 }
 
 
