@@ -10,13 +10,15 @@
 #import "XYSettingsViewController.h"
 #import "XYSquareItem.h"
 #import "XYSquareCell.h"
+#import <SafariServices/SafariServices.h>
+#import <WebKit/WebKit.h>
 
 static NSInteger const clos = 4;
 static CGFloat const margin = 1;
 #define cellWH (ScreenW - (clos - 1) * margin ) / clos
 
 
-@interface XYProfileViewController ()<UICollectionViewDataSource>
+@interface XYProfileViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property(nonatomic,weak) UICollectionView *collectionView;
 
@@ -96,6 +98,7 @@ static CGFloat const margin = 1;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:layout];
     [collectionView registerNib:[UINib nibWithNibName:@"XYSquareCell" bundle:nil] forCellWithReuseIdentifier:XYSquareCellID];
     collectionView.dataSource = self;
+    collectionView.delegate = self;
     collectionView.collectionViewLayout = layout;
     collectionView.backgroundColor = self.tableView.backgroundColor;
     collectionView.scrollEnabled = NO;
@@ -166,6 +169,25 @@ static CGFloat const margin = 1;
     
     return cell;
 }
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 进入子页面
+    
+    XYSquareItem *item = self.squareItems[indexPath.row];
+    
+    DLog(@"%@",item.url);
+    
+    if (!([item.url hasPrefix:@"http://"] || [item.url hasPrefix:@"https://"])) return;
+    
+    SFSafariViewController *safariVc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:item.url] entersReaderIfAvailable:NO];
+//    [self.navigationController pushViewController:safariVc animated:YES];
+    [self presentViewController:safariVc animated:YES completion:nil];
+
+//    WKWebView *web = [ui];
+}
+
 
 
 
