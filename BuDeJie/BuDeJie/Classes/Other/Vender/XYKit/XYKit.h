@@ -24,6 +24,7 @@
 /*************** XYTools **************/
 #import "XYRequestParam.h"
 #import "XYHttpTool.h"
+#import "XYFileTool.h"
 
 
 #endif /* XYKit_h */

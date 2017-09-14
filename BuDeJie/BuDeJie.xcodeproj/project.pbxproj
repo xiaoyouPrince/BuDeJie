@@ -14,6 +14,7 @@
 		B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD501F6974B10056C1A5 /* XYSquareItem.m */; };
 		B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD531F6A2B4F0056C1A5 /* XYWebViewController.m */; };
 		B46BFD561F6A2B4F0056C1A5 /* XYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */; };
+		B46BFD5A1F6A7ABA0056C1A5 /* XYFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD591F6A7ABA0056C1A5 /* XYFileTool.m */; };
 		B49690201F62444300F7A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B496901E1F62444300F7A17C /* Main.storyboard */; };
 		B49690221F62444300F7A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49690211F62444300F7A17C /* Assets.xcassets */; };
 		B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49690231F62444300F7A17C /* LaunchScreen.storyboard */; };
@@ -90,6 +91,8 @@
 		B46BFD521F6A2B4F0056C1A5 /* XYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWebViewController.h; sourceTree = "<group>"; };
 		B46BFD531F6A2B4F0056C1A5 /* XYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWebViewController.m; sourceTree = "<group>"; };
 		B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYWebViewController.xib; sourceTree = "<group>"; };
+		B46BFD581F6A7ABA0056C1A5 /* XYFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFileTool.h; sourceTree = "<group>"; };
+		B46BFD591F6A7ABA0056C1A5 /* XYFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFileTool.m; sourceTree = "<group>"; };
 		B49690121F62444300F7A17C /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B496901F1F62444300F7A17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B49690211F62444300F7A17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,6 +211,15 @@
 				BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B46BFD571F6A5CDD0056C1A5 /* FileTools */ = {
+			isa = PBXGroup;
+			children = (
+				B46BFD581F6A7ABA0056C1A5 /* XYFileTool.h */,
+				B46BFD591F6A7ABA0056C1A5 /* XYFileTool.m */,
+			);
+			path = FileTools;
 			sourceTree = "<group>";
 		};
 		B49690091F62444300F7A17C = {
@@ -548,6 +560,7 @@
 				B49E6EBF1F630D2D00826DF9 /* Foundation */,
 				B49E6EC01F630D2D00826DF9 /* UIKit */,
 				B4BFC49F1F67DFE800439EDD /* HttpTools */,
+				B46BFD571F6A5CDD0056C1A5 /* FileTools */,
 			);
 			path = XYKit;
 			sourceTree = "<group>";
@@ -915,6 +928,7 @@
 				B4BFC4B01F6849B700439EDD /* XYSubTagItem.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
 				B4B020B61F68E051005A9F39 /* XYLoginAndRegistViewController.m in Sources */,
+				B46BFD5A1F6A7ABA0056C1A5 /* XYFileTool.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
 				B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,

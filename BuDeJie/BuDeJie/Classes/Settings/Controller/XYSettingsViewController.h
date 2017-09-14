@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYSettingsViewController : UIViewController
+@interface XYSettingsViewController : UITableViewController
 
 @end
