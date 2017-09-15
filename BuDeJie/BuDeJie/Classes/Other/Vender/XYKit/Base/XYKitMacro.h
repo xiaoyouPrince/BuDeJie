@@ -90,9 +90,12 @@
 
 #define DLog(...) NSLog( @"< %s:(第%d行) > %@",__func__ , __LINE__, [NSString stringWithFormat:__VA_ARGS__] )
 
+#define XYFunc DLog(@"");
+
 #else
 
 #define DLog( s, ... )
+#define XYFunc;
 
 #endif
 /* ****************************************************************************************************************** */

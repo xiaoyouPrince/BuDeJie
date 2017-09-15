@@ -60,6 +60,7 @@
 		B4BFC4B01F6849B700439EDD /* XYSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4AF1F6849B700439EDD /* XYSubTagItem.m */; };
 		B4BFC4B41F684AC100439EDD /* XYSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC4B21F684AC100439EDD /* XYSubTagCell.m */; };
 		B4BFC4B51F684AC100439EDD /* XYSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BFC4B31F684AC100439EDD /* XYSubTagCell.xib */; };
+		B4D440041F6B8484002B9D94 /* XYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D440031F6B8484002B9D94 /* XYTitleButton.m */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,8 @@
 		B4BFC4B11F684AC100439EDD /* XYSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSubTagCell.h; sourceTree = "<group>"; };
 		B4BFC4B21F684AC100439EDD /* XYSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSubTagCell.m; sourceTree = "<group>"; };
 		B4BFC4B31F684AC100439EDD /* XYSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYSubTagCell.xib; sourceTree = "<group>"; };
+		B4D440021F6B8484002B9D94 /* XYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTitleButton.h; sourceTree = "<group>"; };
+		B4D440031F6B8484002B9D94 /* XYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTitleButton.m; sourceTree = "<group>"; };
 		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 		BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 		B496904E1F6292AA00F7A17C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4D440021F6B8484002B9D94 /* XYTitleButton.h */,
+				B4D440031F6B8484002B9D94 /* XYTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -940,6 +945,7 @@
 				B4B020BA1F68E41F005A9F39 /* XYLoginView.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
 				B4BFC48D1F67D70F00439EDD /* XYADViewController.m in Sources */,
+				B4D440041F6B8484002B9D94 /* XYTitleButton.m in Sources */,
 				B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
