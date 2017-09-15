@@ -84,27 +84,16 @@
     scrollView.pagingEnabled = YES;
     [self.view addSubview:scrollView];
     
-//        for (NSUInteger i = 0; i < 5; i++) {
-//            UITableView *tableView = [[UITableView alloc] init];
-//            tableView.xy_width = scrollView.xy_width;
-//            tableView.xy_height = scrollView.xy_height;
-//            tableView.xy_y = 0;
-//            tableView.xy_x = i * scrollView.xy_width;
-//            tableView.tag = i;
-//            tableView.dataSource = self;
-//            tableView.backgroundColor = XYRandomColor;
-//            [scrollView addSubview:tableView];
-//        }
-    
     NSUInteger count = self.childViewControllers.count;
     CGFloat scrollViewW = scrollView.xy_width;
     CGFloat scrollViewH = scrollView.xy_height;
 
     for (NSUInteger i = 0; i < count; i++) {
         // 取出i位置子控制器的view
-        UIView *childVcView = self.childViewControllers[i].view;
+        UITableView *childVcView = (UITableView *)self.childViewControllers[i].view;
         childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
         [scrollView addSubview:childVcView];
+        childVcView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
     }
     
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
