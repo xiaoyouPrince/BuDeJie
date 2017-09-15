@@ -8,8 +8,14 @@
 
 #import "XYEssenceViewController.h"
 #import "XYTitleButton.h"
+#import "XYAllViewController.h"
+#import "XYVideoViewController.h"
+#import "XYVoiceViewController.h"
+#import "XYPictureViewController.h"
+#import "XYWordViewController.h"
 
-@interface XYEssenceViewController ()<UITableViewDataSource>
+
+@interface XYEssenceViewController ()
 
 /** 标题栏 */
 @property (nonatomic, weak) UIView *titlesView;
@@ -28,6 +34,8 @@
     
     self.view.backgroundColor = [UIColor redColor];
     
+    [self addChildViewControllers];
+    
     [self setupNavBar];
     
     [self setupScrollView];
@@ -35,6 +43,15 @@
     [self setupTitleView];
 }
 
+- (void)addChildViewControllers
+{
+    [self addChildViewController:[XYAllViewController new]];
+    [self addChildViewController:[XYVideoViewController new]];
+    [self addChildViewController:[XYVoiceViewController new]];
+    [self addChildViewController:[XYPictureViewController new]];
+    [self addChildViewController:[XYWordViewController new]];
+
+}
 - (void)setupNavBar
 {
     // 左边按钮
@@ -67,28 +84,28 @@
     scrollView.pagingEnabled = YES;
     [self.view addSubview:scrollView];
     
-        for (NSUInteger i = 0; i < 5; i++) {
-            UITableView *tableView = [[UITableView alloc] init];
-            tableView.xy_width = scrollView.xy_width;
-            tableView.xy_height = scrollView.xy_height;
-            tableView.xy_y = 0;
-            tableView.xy_x = i * scrollView.xy_width;
-            tableView.tag = i;
-            tableView.dataSource = self;
-            tableView.backgroundColor = XYRandomColor;
-            [scrollView addSubview:tableView];
-        }
+//        for (NSUInteger i = 0; i < 5; i++) {
+//            UITableView *tableView = [[UITableView alloc] init];
+//            tableView.xy_width = scrollView.xy_width;
+//            tableView.xy_height = scrollView.xy_height;
+//            tableView.xy_y = 0;
+//            tableView.xy_x = i * scrollView.xy_width;
+//            tableView.tag = i;
+//            tableView.dataSource = self;
+//            tableView.backgroundColor = XYRandomColor;
+//            [scrollView addSubview:tableView];
+//        }
     
-    NSUInteger count = self.childViewControllers.count + 5;
+    NSUInteger count = self.childViewControllers.count;
     CGFloat scrollViewW = scrollView.xy_width;
     CGFloat scrollViewH = scrollView.xy_height;
-//
-//    for (NSUInteger i = 0; i < count; i++) {
-//        // 取出i位置子控制器的view
-//        UIView *childVcView = self.childViewControllers[i].view;
-//        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-//        [scrollView addSubview:childVcView];
-//    }
+
+    for (NSUInteger i = 0; i < count; i++) {
+        // 取出i位置子控制器的view
+        UIView *childVcView = self.childViewControllers[i].view;
+        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
+        [scrollView addSubview:childVcView];
+    }
     
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
 }
@@ -166,19 +183,6 @@
     self.titleUnderline.xy_centerX = firstTitleButton.xy_centerX;
 }
 
-#pragma mark -- tableView Delegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 0;
-}
-
-//- (UITableViewCell *)
 
 
 @end
