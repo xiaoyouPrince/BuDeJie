@@ -15,7 +15,9 @@
 #import "XYWordViewController.h"
 
 
-@interface XYEssenceViewController ()
+static NSInteger const XYTag = 100;
+
+@interface XYEssenceViewController ()<UIScrollViewDelegate>
 
 /** 标题栏 */
 @property (nonatomic, weak) UIView *titlesView;
@@ -23,6 +25,8 @@
 @property (nonatomic, weak) UIView *titleUnderline;
 /** 上一次点击的标题按钮 */
 @property (nonatomic, weak) XYTitleButton *previousClickedTitleButton;
+/** 上一次点击的标题按钮 */
+@property (nonatomic, weak) UIScrollView *scrollview;
 
 @end
 
@@ -82,6 +86,7 @@
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
+    scrollView.delegate = self;
     [self.view addSubview:scrollView];
     
     NSUInteger count = self.childViewControllers.count;
@@ -97,6 +102,7 @@
     }
     
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
+    self.scrollview = scrollView;
 }
 
 
@@ -128,6 +134,7 @@
     for (NSUInteger i = 0; i < count; i++) {
         XYTitleButton *titleButton = [[XYTitleButton alloc] init];
         [titleButton addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        titleButton.tag = XYTag + i;
         [self.titlesView addSubview:titleButton];
         // frame
         titleButton.frame = CGRectMake(i * titleButtonW, 0, titleButtonW, titleButtonH);
@@ -148,6 +155,11 @@
         self.titleUnderline.xy_width = titleButton.titleLabel.xy_width + 10;
         self.titleUnderline.xy_centerX = titleButton.xy_centerX;
     }];
+    
+    // 滚动自控制器View
+    NSInteger index = titleButton.tag - XYTag;
+    self.scrollview.contentOffset = CGPointMake(index * self.scrollview.xy_width, 0);
+    
 }
 
 - (void)setupTitleUnderline
@@ -170,6 +182,16 @@
     [firstTitleButton.titleLabel sizeToFit]; // 让label根据文字内容计算尺寸
     self.titleUnderline.xy_width = firstTitleButton.titleLabel.xy_width + 10;
     self.titleUnderline.xy_centerX = firstTitleButton.xy_centerX;
+}
+
+// scrollview 停止滚动，修改titleView的位置和点击状态
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    // 计算当前偏移量倍数
+    NSInteger index = self.scrollview.contentOffset.x / self.scrollview.xy_width;
+    // 点击对应btn
+    XYTitleButton *toClickBtn = self.titlesView.subviews[index];
+    [self titleButtonClick:toClickBtn];
 }
 
 
