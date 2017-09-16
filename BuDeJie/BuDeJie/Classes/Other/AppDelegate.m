@@ -22,7 +22,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [XYADViewController new];
+//    self.window.rootViewController = [XYADViewController new];
+    self.window.rootViewController = [XYTabbarController new];
     
     [self.window makeKeyAndVisible];
     

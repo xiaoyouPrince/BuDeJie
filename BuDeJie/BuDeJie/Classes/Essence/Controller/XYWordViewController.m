@@ -18,6 +18,7 @@ static NSString * const cellID = @"CellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    XYFunc
     
     self.view.backgroundColor = XYRandomColor;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];

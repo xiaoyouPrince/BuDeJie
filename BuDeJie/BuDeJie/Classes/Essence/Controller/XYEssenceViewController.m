@@ -14,7 +14,7 @@
 #import "XYPictureViewController.h"
 #import "XYWordViewController.h"
 
-
+/** 自定的 tag 偏移量 */
 static NSInteger const XYTag = 100;
 
 @interface XYEssenceViewController ()<UIScrollViewDelegate>
@@ -45,6 +45,9 @@ static NSInteger const XYTag = 100;
     [self setupScrollView];
     
     [self setupTitleView];
+    
+    // 快速加载第一个位置的VCView
+    [self addChildVcForIndex:0];
 }
 
 - (void)addChildViewControllers
@@ -74,7 +77,6 @@ static NSInteger const XYTag = 100;
     XYFunc
 }
 
-
 - (void)setupScrollView
 {
     // 不允许自动修改UIScrollView的内边距
@@ -91,16 +93,6 @@ static NSInteger const XYTag = 100;
     
     NSUInteger count = self.childViewControllers.count;
     CGFloat scrollViewW = scrollView.xy_width;
-    CGFloat scrollViewH = scrollView.xy_height;
-
-    for (NSUInteger i = 0; i < count; i++) {
-        // 取出i位置子控制器的view
-        UITableView *childVcView = (UITableView *)self.childViewControllers[i].view;
-        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-        [scrollView addSubview:childVcView];
-        childVcView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
-    }
-    
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
     self.scrollview = scrollView;
 }
@@ -145,6 +137,7 @@ static NSInteger const XYTag = 100;
 
 - (void)titleButtonClick:(XYTitleButton *)titleButton
 {
+
     // 切换按钮状态
     self.previousClickedTitleButton.selected = NO;
     titleButton.selected = YES;
@@ -156,9 +149,21 @@ static NSInteger const XYTag = 100;
         self.titleUnderline.xy_centerX = titleButton.xy_centerX;
     }];
     
-    // 滚动自控制器View
+
     NSInteger index = titleButton.tag - XYTag;
-    self.scrollview.contentOffset = CGPointMake(index * self.scrollview.xy_width, 0);
+    
+    // 懒加载对应子控制View（只加载一次）
+    CGFloat scrollViewW = self.scrollview.xy_width;
+    CGFloat scrollViewH = self.scrollview.xy_height;
+    UITableView *childVcView = (UITableView *)self.childViewControllers[index].view;
+    childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
+    [self.scrollview addSubview:childVcView];
+    childVcView.contentInset = UIEdgeInsetsMake(kNavHeight, 0, kBottomBarHeight, 0);
+    
+    // 滚动自控制器View
+    self.scrollview.contentOffset = CGPointMake(index * self.scrollview.xy_width, self.scrollview.contentOffset.y);
+    
+    //  tableView 的位置不知道怎么回事改变不了(而且滑动用明显时间长于点击按钮，0.005161 ：0.003089 )
     
 }
 
@@ -178,6 +183,7 @@ static NSInteger const XYTag = 100;
     // 切换按钮状态
     firstTitleButton.selected = YES;
     self.previousClickedTitleButton = firstTitleButton;
+//    [self titleButtonClick:firstTitleButton]; 功能同上两行
     
     [firstTitleButton.titleLabel sizeToFit]; // 让label根据文字内容计算尺寸
     self.titleUnderline.xy_width = firstTitleButton.titleLabel.xy_width + 10;
@@ -187,6 +193,7 @@ static NSInteger const XYTag = 100;
 // scrollview 停止滚动，修改titleView的位置和点击状态
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    
     // 计算当前偏移量倍数
     NSInteger index = self.scrollview.contentOffset.x / self.scrollview.xy_width;
     // 点击对应btn
@@ -194,6 +201,19 @@ static NSInteger const XYTag = 100;
     [self titleButtonClick:toClickBtn];
 }
 
+
+/**
+ 快速添加对应位置的childVc
+ */
+- (void)addChildVcForIndex:(NSInteger)index
+{
+    CGFloat scrollViewW = self.scrollview.xy_width;
+    CGFloat scrollViewH = self.scrollview.xy_height;
+    UITableView *childVcView = (UITableView *)self.childViewControllers[index].view;
+    childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
+    [self.scrollview addSubview:childVcView];
+    childVcView.contentInset = UIEdgeInsetsMake(kNavHeight, 0, kBottomBarHeight, 0);
+}
 
 
 @end
