@@ -88,6 +88,7 @@ static NSInteger const XYTag = 100;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
+    scrollView.scrollsToTop = NO; // 点击状态栏的时候，这个scrollView不会滚动到最顶部
     scrollView.delegate = self;
     [self.view addSubview:scrollView];
     
@@ -143,28 +144,32 @@ static NSInteger const XYTag = 100;
     titleButton.selected = YES;
     self.previousClickedTitleButton = titleButton;
     
+    NSInteger index = titleButton.tag - XYTag;
+
     [UIView animateWithDuration:0.25 animations:^{
         // 处理下划线
         self.titleUnderline.xy_width = titleButton.titleLabel.xy_width + 10;
         self.titleUnderline.xy_centerX = titleButton.xy_centerX;
+        
+        // 滚动自控制器View
+        self.scrollview.contentOffset = CGPointMake(index * self.scrollview.xy_width, self.scrollview.contentOffset.y);
+    } completion:^(BOOL finished) {
+        
+        // 懒加载对应子控制View（只加载一次）
+        CGFloat scrollViewW = self.scrollview.xy_width;
+        CGFloat scrollViewH = self.scrollview.xy_height;
+        UITableView *childVcView = (UITableView *)self.childViewControllers[index].view;
+        childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
+        [self.scrollview addSubview:childVcView];
+        childVcView.contentInset = UIEdgeInsetsMake(kNavHeight, 0, kBottomBarHeight, 0);
     }];
     
 
-    NSInteger index = titleButton.tag - XYTag;
     
-    // 懒加载对应子控制View（只加载一次）
-    CGFloat scrollViewW = self.scrollview.xy_width;
-    CGFloat scrollViewH = self.scrollview.xy_height;
-    UITableView *childVcView = (UITableView *)self.childViewControllers[index].view;
-    childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
-    [self.scrollview addSubview:childVcView];
-    childVcView.contentInset = UIEdgeInsetsMake(kNavHeight, 0, kBottomBarHeight, 0);
+
     
-    // 滚动自控制器View
-    self.scrollview.contentOffset = CGPointMake(index * self.scrollview.xy_width, self.scrollview.contentOffset.y);
     
     //  tableView 的位置不知道怎么回事改变不了(而且滑动用明显时间长于点击按钮，0.005161 ：0.003089 )
-    
 }
 
 - (void)setupTitleUnderline
