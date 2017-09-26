@@ -144,8 +144,8 @@ static NSInteger const XYTag = 100;
     titleButton.selected = YES;
     self.previousClickedTitleButton = titleButton;
     
+    // 动画
     NSInteger index = titleButton.tag - XYTag;
-
     [UIView animateWithDuration:0.25 animations:^{
         // 处理下划线
         self.titleUnderline.xy_width = titleButton.titleLabel.xy_width + 10;
@@ -156,16 +156,26 @@ static NSInteger const XYTag = 100;
     } completion:^(BOOL finished) {
         
         // 懒加载对应子控制View（只加载一次）
-        CGFloat scrollViewW = self.scrollview.xy_width;
-        CGFloat scrollViewH = self.scrollview.xy_height;
-        UITableView *childVcView = (UITableView *)self.childViewControllers[index].view;
-        childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
-        [self.scrollview addSubview:childVcView];
-        childVcView.contentInset = UIEdgeInsetsMake(kNavHeight, 0, kBottomBarHeight, 0);
+        [self addChildVcForIndex:index];
     }];
     
-
-    
+    // 监听状态栏点击，允许当前tableView上滑
+    // 设置index位置对应的tableView.scrollsToTop = YES， 其他都设置为NO
+    for (NSUInteger i = 0; i < self.childViewControllers.count; i++) {
+        UIViewController *childVc = self.childViewControllers[i];
+        // 如果view还没有被创建，就不用去处理
+        if (!childVc.isViewLoaded) continue;
+        
+        UIScrollView *scrollView = (UIScrollView *)childVc.view;
+        if (![scrollView isKindOfClass:[UIScrollView class]]) continue;
+        
+        //        if (i == index) { // 是标题按钮对应的子控制器
+        //            scrollView.scrollsToTop = YES;
+        //        } else {
+        //            scrollView.scrollsToTop = NO;
+        //        }
+        scrollView.scrollsToTop = (i == index);
+    }
 
     
     

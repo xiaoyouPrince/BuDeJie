@@ -12,6 +12,8 @@
 
 @property(nonatomic,weak) UIButton *plusBtn;
 
+@property(nonatomic,weak) UIControl *preClickedTabbarButton; ///< 上一个被点击的tabbarButton
+
 @end
 
 @implementation XYTabBar
@@ -46,6 +48,17 @@
 //        DLog(@"%@",view);
         
         if ([view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            
+            
+//            if (i == 0 && self.preClickedTabbarButton == nil) {
+                if ([view.superclass isSubclassOfClass:[UIControl class]] && self.preClickedTabbarButton == nil) {
+                    self.preClickedTabbarButton = (UIControl *)view;
+                }
+//            }
+            
+            UIControl *item = (UIControl *)view;
+            [item addTarget:self action:@selector(tabbarButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            
                 
             if (i == 2) { // 不能写死
                 i += 1;
@@ -68,6 +81,14 @@
 {
     UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"你好" message:@"此模块正在开发中共" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"好的", nil];
     [a show];
+}
+
+- (void)tabbarButtonClick:(UIControl *)tabbarButton
+{
+    if (self.preClickedTabbarButton == tabbarButton) {
+        XYFunc
+    }
+    self.preClickedTabbarButton = tabbarButton;
 }
 
 

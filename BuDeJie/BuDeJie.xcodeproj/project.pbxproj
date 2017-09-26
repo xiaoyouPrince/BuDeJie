@@ -67,6 +67,7 @@
 		B4D440101F6B89F8002B9D94 /* XYPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4400F1F6B89F8002B9D94 /* XYPictureViewController.m */; };
 		B4D440131F6B8A03002B9D94 /* XYWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D440121F6B8A03002B9D94 /* XYWordViewController.m */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
+		B4D7D5FE1F790AA6000616FE /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D5FD1F790AA6000616FE /* XYCommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,8 @@
 		B4D440121F6B8A03002B9D94 /* XYWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWordViewController.m; sourceTree = "<group>"; };
 		B4D4952C1F6688DF00A5EE5E /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
+		B4D7D5FC1F790AA6000616FE /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
+		B4D7D5FD1F790AA6000616FE /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
 		BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		DBABB8AE055121CB366C0A9A /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -599,6 +602,8 @@
 			isa = PBXGroup;
 			children = (
 				B49E6EC41F630D7000826DF9 /* XYKitMacro.h */,
+				B4D7D5FC1F790AA6000616FE /* XYCommon.h */,
+				B4D7D5FD1F790AA6000616FE /* XYCommon.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -967,6 +972,7 @@
 				B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
+				B4D7D5FE1F790AA6000616FE /* XYCommon.m in Sources */,
 				B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */,
 				B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */,
 				B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */,
