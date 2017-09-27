@@ -22,6 +22,36 @@ static NSString * const cellID = @"CellID";
     
     self.view.backgroundColor = XYRandomColor;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XYTitleButtonDidRepeatClickNotification object:nil];
+}
+
+- (void)dealloc
+{
+    [kNotificationCenter removeObserver:self];
+}
+
+#pragma mark - 监听
+
+/**
+ 监听tabbarBtn 重复点击
+ */
+- (void)tabBarButtonDidRepeatClick
+{
+    if (self.view.window == nil) return;
+    
+    if (self.tableView.scrollsToTop == NO) return;
+    
+    DLog(@" -- %@ -- 刷新数据",self.class);
+}
+/**
+ 监听TitleBtn 重复点击
+ */
+- (void)titleButtonDidRepeatClick
+{
+    [self tabBarButtonDidRepeatClick];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

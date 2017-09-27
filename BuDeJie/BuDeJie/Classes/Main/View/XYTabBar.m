@@ -83,10 +83,18 @@
     [a show];
 }
 
+/**
+ @author xiaoyou @time 2017年09月27日23:17:52
+ 监听 tabbarBtnItem 重复点击
+ 
+ @param tabbarButton tabbarButton
+ */
 - (void)tabbarButtonClick:(UIControl *)tabbarButton
 {
     if (self.preClickedTabbarButton == tabbarButton) {
-        XYFunc
+        
+        // 发送通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:XYTabBarButtonDidRepeatClickNotification object:nil];
     }
     self.preClickedTabbarButton = tabbarButton;
 }

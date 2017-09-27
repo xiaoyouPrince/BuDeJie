@@ -19,6 +19,7 @@
 #import <SVProgressHUD.h>
 
 #import "XYKit.h"
+#import "XYCommon.h"
 
 
 #endif /* BuDeJie_pch */

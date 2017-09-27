@@ -139,6 +139,11 @@ static NSInteger const XYTag = 100;
 - (void)titleButtonClick:(XYTitleButton *)titleButton
 {
 
+    // 判断重复点击，并发送通知
+    if (self.previousClickedTitleButton == titleButton) {
+        [kNotificationCenter postNotificationName:XYTitleButtonDidRepeatClickNotification object:nil];
+    }
+    
     // 切换按钮状态
     self.previousClickedTitleButton.selected = NO;
     titleButton.selected = YES;
