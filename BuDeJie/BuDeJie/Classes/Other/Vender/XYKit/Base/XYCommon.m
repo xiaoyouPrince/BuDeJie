@@ -10,3 +10,6 @@ NSString  * const XYTabBarButtonDidRepeatClickNotification = @"XMGTabBarButtonDi
 
 /** TitleButton被重复点击的通知 */
 NSString  * const XYTitleButtonDidRepeatClickNotification = @"XMGTitleButtonDidRepeatClickNotification";
+
+/** 统一的一个请求路径 */
+NSString  * const XYCommonURL = @"http://api.budejie.com/api/api_open.php";
