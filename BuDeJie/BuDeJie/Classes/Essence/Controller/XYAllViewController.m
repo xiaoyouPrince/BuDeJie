@@ -9,17 +9,25 @@
 #import "XYAllViewController.h"
 #import "MJRefresh.h"
 #import "XYTopic.h"
+#import "XYTopicCell.h"
+
 
 @interface XYAllViewController ()
 
 @property(nonatomic , strong) NSArray  *dataArray;
+
+/** 数据数组 */
 @property(nonatomic , strong) NSMutableArray  <XYTopic *>*topics;
+/** 记录上次刷新最大值 */
+@property(nonatomic , strong) NSString  *maxtime; // 同maxid
 
 @end
 @implementation XYAllViewController
 
+//static NSString * const cellID = @"CellID";
+//static NSString * const TopicCellID = @"TopicCellID";
 
-static NSString * const cellID = @"CellID";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -31,7 +39,8 @@ static NSString * const cellID = @"CellID";
     _dataArray = @[@"ib服务i",@"佛玩法",@"很热很热",@"ljm7",@"脾气九宫格",@"喔i4yjnge",@"欧气会各二个人",@"欧威银行业务 ",@"5uejprklreye5欧尼",@"i34uwtq93848y艾克开会",@"该不该欧委会我IEUHF蓝帆",@"4一公分沃尔夫",@"4\(^o^)/~欧冠"];
     
     self.view.backgroundColor = XYRandomColor;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TopicCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"XYTopicCell" bundle:nil] forCellReuseIdentifier:TopicCellID];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
@@ -116,6 +125,8 @@ static NSString * const cellID = @"CellID";
         
         DLog(@"%@",json);
         
+        // 保存刷新的到数据的最大值
+        self.maxtime = json[@"info"][@"maxtime"];
         
         // 保存数据
         self.topics = [XYTopic mj_objectArrayWithKeyValuesArray:json[@"list"]];
@@ -127,10 +138,8 @@ static NSString * const cellID = @"CellID";
 
         
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍后重试..."];
         [self.tableView.mj_header endRefreshing];
-
-        
     }];
 }
 
@@ -143,8 +152,12 @@ static NSString * const cellID = @"CellID";
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
     parameters[@"type"] = @"1"; // 这里发送@1也是可行的
+    parameters[@"maxtime"] = self.maxtime;
     
     [XYHttpTool getWithURL:XYCommonURL params:parameters success:^(id json) {
+        
+        // 保存刷新的到数据的最大值
+        self.maxtime = json[@"info"][@"maxtime"];
         
         // 保存数据
         NSMutableArray *arrayM = [XYTopic mj_objectArrayWithKeyValuesArray:json[@"list"]];
@@ -156,11 +169,10 @@ static NSString * const cellID = @"CellID";
         [self.tableView.mj_footer endRefreshing];
         
     } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍后重试..."];
         [self.tableView.mj_footer endRefreshing];
     }];
-    
-    
-    
+
     [self.tableView.mj_footer endRefreshing];
 }
 
@@ -172,18 +184,28 @@ static NSString * const cellID = @"CellID";
     return self.topics.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    CGRect rect = [self.topics[indexPath.row].text boundingRectWithSize:CGSizeMake(ScreenW - 2*10, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil];
+    
+    NSLog(@"%@",NSStringFromCGRect(rect));
+    
+    return rect.size.height + 100;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"----%ld----%@",indexPath.row,self.topics[indexPath.row].name];
+    /** 帖子的类型 10为图片 29为段子 31为音频 41为视频 */
     
+    XYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:TopicCellID];
+    cell.model = self.topics[indexPath.row];
     return cell;
 }
 

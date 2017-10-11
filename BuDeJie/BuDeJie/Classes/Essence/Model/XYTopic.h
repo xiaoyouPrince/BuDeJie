@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef NS_ENUM( NSInteger , XYTopicType ) {
+    /** 全部 */
+    XYTopicTypeAll = 1,
+    /** 图片 */
+    XYTopicTypePicture = 10,
+    /** 段子 */
+    XYTopicTypeWord = 29,
+    /** 声音 */
+    XYTopicTypeVoice = 31,
+    /** 视频 */
+    XYTopicTypeVideo = 41
+};
+
 @interface XYTopic : NSObject
 
 /** 用户的名字 */
@@ -27,5 +41,8 @@
 @property (nonatomic, assign) NSInteger repost;
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
+
+/** 帖子的类型 10为图片 29为段子 31为音频 41为视频 */
+@property (nonatomic, assign) NSInteger type;
 
 @end

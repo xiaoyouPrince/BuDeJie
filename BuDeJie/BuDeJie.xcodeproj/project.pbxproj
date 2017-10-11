@@ -69,6 +69,8 @@
 		B4D440131F6B8A03002B9D94 /* XYWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D440121F6B8A03002B9D94 /* XYWordViewController.m */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 		B4D7D5FE1F790AA6000616FE /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D5FD1F790AA6000616FE /* XYCommon.m */; };
+		B4E968511F8DF5F300CC4BD5 /* XYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E968501F8DF5F300CC4BD5 /* XYTopicCell.m */; };
+		B4E968531F8DF62600CC4BD5 /* XYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +200,9 @@
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 		B4D7D5FC1F790AA6000616FE /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
 		B4D7D5FD1F790AA6000616FE /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
+		B4E968411F8DCA2200CC4BD5 /* XYTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopicCell.h; sourceTree = "<group>"; };
+		B4E968501F8DF5F300CC4BD5 /* XYTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicCell.m; sourceTree = "<group>"; };
+		B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYTopicCell.xib; sourceTree = "<group>"; };
 		BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		DBABB8AE055121CB366C0A9A /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,6 +376,9 @@
 			children = (
 				B4D440021F6B8484002B9D94 /* XYTitleButton.h */,
 				B4D440031F6B8484002B9D94 /* XYTitleButton.m */,
+				B4E968411F8DCA2200CC4BD5 /* XYTopicCell.h */,
+				B4E968501F8DF5F300CC4BD5 /* XYTopicCell.m */,
+				B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,6 +871,7 @@
 				B4B020B21F68C8CE005A9F39 /* XYFriendTrendViewController.xib in Resources */,
 				B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */,
+				B4E968531F8DF62600CC4BD5 /* XYTopicCell.xib in Resources */,
 				B4BFC4AA1F683EE600439EDD /* ad.plist in Resources */,
 				B4B020BC1F68E429005A9F39 /* XYLoginView.xib in Resources */,
 				B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */,
@@ -974,6 +983,7 @@
 				B4B020B61F68E051005A9F39 /* XYLoginAndRegistViewController.m in Sources */,
 				B46BFD5A1F6A7ABA0056C1A5 /* XYFileTool.m in Sources */,
 				B49690741F629F9C00F7A17C /* XYPublishViewController.m in Sources */,
+				B4E968511F8DF5F300CC4BD5 /* XYTopicCell.m in Sources */,
 				B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,

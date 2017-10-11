@@ -49,4 +49,14 @@
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
 
+
+/**
+ 根据图片名返回对应的圆角图片
+
+ @param name 图片名
+ @return 圆角图片
+ */
++ (UIImage *)circleImageNamed:(NSString *)name;
+- (instancetype)circleImage;
+
 @end
