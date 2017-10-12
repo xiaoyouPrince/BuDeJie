@@ -81,7 +81,6 @@ static const CGFloat XYMargin = 10;
     [self setupButtonTitle:self.caiButton number:model.cai placeholder:@"踩"];
     [self setupButtonTitle:self.repostButton number:model.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton number:model.comment placeholder:@"评论"];
-
     
 }
 

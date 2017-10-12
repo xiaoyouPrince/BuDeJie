@@ -192,11 +192,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGRect rect = [self.topics[indexPath.row].text boundingRectWithSize:CGSizeMake(ScreenW - 2*10, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil];
+//    CGRect rect = [self.topics[indexPath.row].text boundingRectWithSize:CGSizeMake(ScreenW - 2*10, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil];
+//
+//    NSLog(@"%@",NSStringFromCGRect(rect));
+//
+//    return rect.size.height + 100;
     
-    NSLog(@"%@",NSStringFromCGRect(rect));
-    
-    return rect.size.height + 100;
+    return self.topics[indexPath.row].cellHeight;
 }
 
 
