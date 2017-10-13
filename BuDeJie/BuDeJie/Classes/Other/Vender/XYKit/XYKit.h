@@ -18,7 +18,8 @@
 #import "UITextField+XYAdd.h"
 
 /*************** Foundation **************/
-
+#import "NSObject+XYAdd.h"
+#import "NSString+XYAdd.h"
 
 
 /*************** XYTools **************/

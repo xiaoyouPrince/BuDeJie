@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+@property (weak, nonatomic) IBOutlet UILabel *topCmtLabel;
+
 
 @end
 
@@ -81,6 +84,21 @@ static const CGFloat XYMargin = 10;
     [self setupButtonTitle:self.caiButton number:model.cai placeholder:@"踩"];
     [self setupButtonTitle:self.repostButton number:model.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton number:model.comment placeholder:@"评论"];
+    
+    // 最热评论
+    if (model.top_cmt.count) { // 有最热评论
+        self.topCmtView.hidden = NO;
+        
+        NSDictionary *cmt = model.top_cmt.firstObject;
+        NSString *content = cmt[@"content"];
+        if (content.length == 0) { // 语音评论
+            content = @"[语音评论]";
+        }
+        NSString *username = cmt[@"user"][@"username"];
+        self.topCmtLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
+    } else { // 没有最热评论
+        self.topCmtView.hidden = YES;
+    }
     
 }
 

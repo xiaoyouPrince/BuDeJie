@@ -56,6 +56,33 @@
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMD-1G-45c" userLabel="最热评论bg">
+                        <rect key="frame" x="10" y="267.5" width="300" height="93.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【最热评论】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3I-Or-TXc">
+                                <rect key="frame" x="10" y="5" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是最热评论我是最热评论我是最热评论我是最热评论我是最热评论我是最热评论我是最热评论" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEI-H5-HFY">
+                                <rect key="frame" x="10" y="31" width="280" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91591179370880127" green="0.97675865888595581" blue="0.97701972723007202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H3I-Or-TXc" firstAttribute="leading" secondItem="iMD-1G-45c" secondAttribute="leading" constant="10" id="2j4-bi-95o"/>
+                            <constraint firstItem="H3I-Or-TXc" firstAttribute="top" secondItem="iMD-1G-45c" secondAttribute="top" constant="5" id="5Ud-AF-3wY"/>
+                            <constraint firstAttribute="trailing" secondItem="H3I-Or-TXc" secondAttribute="trailing" constant="10" id="AfS-fH-cFo"/>
+                            <constraint firstItem="aEI-H5-HFY" firstAttribute="top" secondItem="H3I-Or-TXc" secondAttribute="bottom" constant="5" id="As2-Zn-dpx"/>
+                            <constraint firstAttribute="bottom" secondItem="aEI-H5-HFY" secondAttribute="bottom" constant="5" id="lCn-ke-uw7"/>
+                            <constraint firstItem="aEI-H5-HFY" firstAttribute="leading" secondItem="H3I-Or-TXc" secondAttribute="leading" id="qk7-HE-HD9"/>
+                            <constraint firstItem="aEI-H5-HFY" firstAttribute="trailing" secondItem="H3I-Or-TXc" secondAttribute="trailing" id="vZB-uz-VIO"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17R-bz-i1d" userLabel="底部工具条">
                         <rect key="frame" x="0.0" y="362" width="320" height="35"/>
                         <subviews>
@@ -171,6 +198,8 @@
                     <constraint firstItem="kZl-pf-Pai" firstAttribute="top" secondItem="ajo-ag-QJQ" secondAttribute="bottom" constant="10" id="CqF-9d-5t6"/>
                     <constraint firstItem="zJE-ZC-e8C" firstAttribute="top" secondItem="XFq-RL-MH3" secondAttribute="top" constant="10" id="DTb-VR-dFu"/>
                     <constraint firstItem="giE-9S-cYj" firstAttribute="top" secondItem="zJE-ZC-e8C" secondAttribute="top" id="HCc-MU-6mg"/>
+                    <constraint firstItem="iMD-1G-45c" firstAttribute="trailing" secondItem="kZl-pf-Pai" secondAttribute="trailing" id="OTv-OB-c0Z"/>
+                    <constraint firstItem="iMD-1G-45c" firstAttribute="leading" secondItem="kZl-pf-Pai" secondAttribute="leading" id="RUc-Nt-98M"/>
                     <constraint firstItem="zJE-ZC-e8C" firstAttribute="bottom" secondItem="ajo-ag-QJQ" secondAttribute="bottom" id="TrL-Et-Qgb"/>
                     <constraint firstAttribute="bottom" secondItem="17R-bz-i1d" secondAttribute="bottom" id="cXj-Zr-2L7"/>
                     <constraint firstItem="kZl-pf-Pai" firstAttribute="leading" secondItem="zJE-ZC-e8C" secondAttribute="leading" id="cYh-de-Dhk"/>
@@ -181,6 +210,7 @@
                     <constraint firstItem="17R-bz-i1d" firstAttribute="leading" secondItem="XFq-RL-MH3" secondAttribute="leading" id="sno-CL-sbU"/>
                     <constraint firstAttribute="trailing" secondItem="yyR-XF-8jh" secondAttribute="trailing" constant="10" id="wDF-ip-WhB"/>
                     <constraint firstItem="kZl-pf-Pai" firstAttribute="trailing" secondItem="yyR-XF-8jh" secondAttribute="trailing" id="xAV-S3-Syp"/>
+                    <constraint firstItem="17R-bz-i1d" firstAttribute="top" secondItem="iMD-1G-45c" secondAttribute="bottom" constant="1" id="xvS-1P-icD"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -193,6 +223,8 @@
                 <outlet property="profileImageView" destination="zJE-ZC-e8C" id="xAU-Ig-EYe"/>
                 <outlet property="repostButton" destination="YFP-Pr-wKd" id="V5c-N0-fe8"/>
                 <outlet property="text_label" destination="kZl-pf-Pai" id="Jqx-8Q-7Zy"/>
+                <outlet property="topCmtLabel" destination="aEI-H5-HFY" id="s1m-AH-Hu2"/>
+                <outlet property="topCmtView" destination="iMD-1G-45c" id="wsh-Ll-eAT"/>
             </connections>
             <point key="canvasLocation" x="214" y="-26"/>
         </tableViewCell>

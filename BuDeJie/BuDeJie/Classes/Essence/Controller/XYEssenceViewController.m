@@ -36,7 +36,7 @@ static NSInteger const XYTag = 100;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self addChildViewControllers];
     
@@ -83,7 +83,7 @@ static NSInteger const XYTag = 100;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
-    scrollView.backgroundColor = [UIColor blueColor];
+    //scrollView.backgroundColor = [UIColor blueColor];
     scrollView.frame = self.view.bounds;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;

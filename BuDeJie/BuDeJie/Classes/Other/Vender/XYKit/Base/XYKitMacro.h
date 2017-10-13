@@ -16,6 +16,7 @@
 // 2.获得RGB颜色
 #define XYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define XYRGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha: (a)]
+#define XYGrayColor(v) XYColor(v,v,v)
 // 3.获得随机颜色
 #define XYRandomColor XYColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
@@ -25,6 +26,11 @@
 // 5.userDefault
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 #define kGlobalBg XYColor(232, 233, 232)
+
+// 6.写入文件
+// @#filename -> @"filename"
+#define XMGAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/quxiaoyou/Desktop/%@.plist", @#filename] atomically:YES];
+
 
 //** 屏幕参数 ***********************************************************************************
 #define ScreenW [UIScreen mainScreen].bounds.size.width
