@@ -21,4 +21,10 @@
 @property CGSize  xy_size;
 #pragma mark --- frame相关
 
+
+/**
+ 通过xib快速加载view
+ */
++ (instancetype)xy_viewFromXib;
+
 @end

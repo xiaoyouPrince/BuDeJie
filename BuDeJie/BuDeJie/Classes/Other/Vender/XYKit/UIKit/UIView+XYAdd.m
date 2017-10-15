@@ -110,6 +110,11 @@
 }
 #pragma mark --- frame相关
 
++ (instancetype)xy_viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
+
 
 
 @end

@@ -192,22 +192,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    CGRect rect = [self.topics[indexPath.row].text boundingRectWithSize:CGSizeMake(ScreenW - 2*10, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil];
-//
-//    NSLog(@"%@",NSStringFromCGRect(rect));
-//
-//    return rect.size.height + 100;
-    
     return self.topics[indexPath.row].cellHeight;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    /** 帖子的类型 10为图片 29为段子 31为音频 41为视频 */
+    
     
     XYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:TopicCellID];
-    cell.model = self.topics[indexPath.row];
+    cell.model = self.topics[indexPath.row];    
     return cell;
 }
 

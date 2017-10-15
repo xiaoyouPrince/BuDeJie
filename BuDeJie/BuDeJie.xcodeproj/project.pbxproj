@@ -73,6 +73,12 @@
 		B4E968531F8DF62600CC4BD5 /* XYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */; };
 		B4EA404C1F906D0D00261506 /* NSObject+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EA404B1F906D0D00261506 /* NSObject+XYAdd.m */; };
 		B4EA404F1F906D5E00261506 /* NSString+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EA404E1F906D5E00261506 /* NSString+XYAdd.m */; };
+		B4EA40521F90C10500261506 /* XYTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EA40511F90C10500261506 /* XYTopicVideoView.m */; };
+		B4EA40541F90C11000261506 /* XYTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EA40531F90C11000261506 /* XYTopicVideoView.xib */; };
+		B4EA40571F90C14600261506 /* XYTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EA40561F90C14600261506 /* XYTopicVoiceView.m */; };
+		B4EA40591F90C15000261506 /* XYTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EA40581F90C15000261506 /* XYTopicVoiceView.xib */; };
+		B4EA405C1F90C17500261506 /* XYTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EA405B1F90C17500261506 /* XYTopicPictureView.m */; };
+		B4EA405E1F90C17E00261506 /* XYTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EA405D1F90C17E00261506 /* XYTopicPictureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +215,15 @@
 		B4EA404B1F906D0D00261506 /* NSObject+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XYAdd.m"; sourceTree = "<group>"; };
 		B4EA404D1F906D5E00261506 /* NSString+XYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XYAdd.h"; sourceTree = "<group>"; };
 		B4EA404E1F906D5E00261506 /* NSString+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XYAdd.m"; sourceTree = "<group>"; };
+		B4EA40501F90C10500261506 /* XYTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopicVideoView.h; sourceTree = "<group>"; };
+		B4EA40511F90C10500261506 /* XYTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTopicVideoView.m; sourceTree = "<group>"; };
+		B4EA40531F90C11000261506 /* XYTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYTopicVideoView.xib; sourceTree = "<group>"; };
+		B4EA40551F90C14600261506 /* XYTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopicVoiceView.h; sourceTree = "<group>"; };
+		B4EA40561F90C14600261506 /* XYTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTopicVoiceView.m; sourceTree = "<group>"; };
+		B4EA40581F90C15000261506 /* XYTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYTopicVoiceView.xib; sourceTree = "<group>"; };
+		B4EA405A1F90C17500261506 /* XYTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopicPictureView.h; sourceTree = "<group>"; };
+		B4EA405B1F90C17500261506 /* XYTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTopicPictureView.m; sourceTree = "<group>"; };
+		B4EA405D1F90C17E00261506 /* XYTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYTopicPictureView.xib; sourceTree = "<group>"; };
 		BE7C633EA669086D38C13F0A /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		DBABB8AE055121CB366C0A9A /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -385,6 +400,15 @@
 				B4E968411F8DCA2200CC4BD5 /* XYTopicCell.h */,
 				B4E968501F8DF5F300CC4BD5 /* XYTopicCell.m */,
 				B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */,
+				B4EA40501F90C10500261506 /* XYTopicVideoView.h */,
+				B4EA40511F90C10500261506 /* XYTopicVideoView.m */,
+				B4EA40531F90C11000261506 /* XYTopicVideoView.xib */,
+				B4EA40551F90C14600261506 /* XYTopicVoiceView.h */,
+				B4EA40561F90C14600261506 /* XYTopicVoiceView.m */,
+				B4EA40581F90C15000261506 /* XYTopicVoiceView.xib */,
+				B4EA405A1F90C17500261506 /* XYTopicPictureView.h */,
+				B4EA405B1F90C17500261506 /* XYTopicPictureView.m */,
+				B4EA405D1F90C17E00261506 /* XYTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -882,6 +906,7 @@
 				B4BFC49C1F67D8ED00439EDD /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B49690251F62444300F7A17C /* LaunchScreen.storyboard in Resources */,
 				B4E968531F8DF62600CC4BD5 /* XYTopicCell.xib in Resources */,
+				B4EA405E1F90C17E00261506 /* XYTopicPictureView.xib in Resources */,
 				B4BFC4AA1F683EE600439EDD /* ad.plist in Resources */,
 				B4B020BC1F68E429005A9F39 /* XYLoginView.xib in Resources */,
 				B4BFC49E1F67D8ED00439EDD /* LaunchImage@2x.png in Resources */,
@@ -893,10 +918,12 @@
 				B4BFC4981F67D8ED00439EDD /* LaunchImage-568h@2x.png in Resources */,
 				B4BFC4B51F684AC100439EDD /* XYSubTagCell.xib in Resources */,
 				B4BFC49D1F67D8ED00439EDD /* LaunchImage.png in Resources */,
+				B4EA40591F90C15000261506 /* XYTopicVoiceView.xib in Resources */,
 				B46BFD4E1F696E900056C1A5 /* XYSquareCell.xib in Resources */,
 				B49690221F62444300F7A17C /* Assets.xcassets in Resources */,
 				B4BFC49A1F67D8ED00439EDD /* LaunchImage-700@2x.png in Resources */,
 				B49690201F62444300F7A17C /* Main.storyboard in Resources */,
+				B4EA40541F90C11000261506 /* XYTopicVideoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1018,8 @@
 				B4D440101F6B89F8002B9D94 /* XYPictureViewController.m in Sources */,
 				B4BFC4B01F6849B700439EDD /* XYSubTagItem.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
+				B4EA40571F90C14600261506 /* XYTopicVoiceView.m in Sources */,
+				B4EA40521F90C10500261506 /* XYTopicVideoView.m in Sources */,
 				B4D4400A1F6B89E0002B9D94 /* XYVideoViewController.m in Sources */,
 				B4B020B61F68E051005A9F39 /* XYLoginAndRegistViewController.m in Sources */,
 				B46BFD5A1F6A7ABA0056C1A5 /* XYFileTool.m in Sources */,
@@ -1008,6 +1037,7 @@
 				B4B020BA1F68E41F005A9F39 /* XYLoginView.m in Sources */,
 				B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */,
 				B4D440071F6B89D4002B9D94 /* XYAllViewController.m in Sources */,
+				B4EA405C1F90C17500261506 /* XYTopicPictureView.m in Sources */,
 				B4BFC48D1F67D70F00439EDD /* XYADViewController.m in Sources */,
 				B4D440041F6B8484002B9D94 /* XYTitleButton.m in Sources */,
 				B4BFC4771F66F69400439EDD /* UIView+XYAdd.m in Sources */,
