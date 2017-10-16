@@ -30,6 +30,7 @@
 		B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49690761F629FE400F7A17C /* XYProfileViewController.m */; };
 		B496907E1F62A04900F7A17C /* XYTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496907D1F62A04900F7A17C /* XYTabbarController.m */; };
 		B49E6EC31F630D2D00826DF9 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */; };
+		B4A3C90A1F950EC600BD280D /* XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A3C9091F950EC600BD280D /* XYAdd.m */; };
 		B4B020B21F68C8CE005A9F39 /* XYFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020B11F68C8CE005A9F39 /* XYFriendTrendViewController.xib */; };
 		B4B020B61F68E051005A9F39 /* XYLoginAndRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B020B41F68E051005A9F39 /* XYLoginAndRegistViewController.m */; };
 		B4B020B71F68E051005A9F39 /* XYLoginAndRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B020B51F68E051005A9F39 /* XYLoginAndRegistViewController.xib */; };
@@ -143,6 +144,8 @@
 		B49E6EC11F630D2D00826DF9 /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
 		B49E6EC21F630D2D00826DF9 /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
 		B49E6EC41F630D7000826DF9 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B4A3C9081F950EC600BD280D /* XYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAdd.h; sourceTree = "<group>"; };
+		B4A3C9091F950EC600BD280D /* XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAdd.m; sourceTree = "<group>"; };
 		B4B020B11F68C8CE005A9F39 /* XYFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYFriendTrendViewController.xib; sourceTree = "<group>"; };
 		B4B020B31F68E051005A9F39 /* XYLoginAndRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginAndRegistViewController.h; sourceTree = "<group>"; };
 		B4B020B41F68E051005A9F39 /* XYLoginAndRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginAndRegistViewController.m; sourceTree = "<group>"; };
@@ -673,6 +676,8 @@
 				B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */,
 				B4B020C81F6934D0005A9F39 /* UITextField+XYAdd.h */,
 				B4B020C91F6934D0005A9F39 /* UITextField+XYAdd.m */,
+				B4A3C9081F950EC600BD280D /* XYAdd.h */,
+				B4A3C9091F950EC600BD280D /* XYAdd.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1032,6 +1037,7 @@
 				B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */,
 				B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */,
 				B46BFD511F6974B10056C1A5 /* XYSquareItem.m in Sources */,
+				B4A3C90A1F950EC600BD280D /* XYAdd.m in Sources */,
 				B48C73D51F8CD1F6003A796B /* XYTopic.m in Sources */,
 				B49690711F629F2B00F7A17C /* XYNewViewController.m in Sources */,
 				B4B020BA1F68E41F005A9F39 /* XYLoginView.m in Sources */,
