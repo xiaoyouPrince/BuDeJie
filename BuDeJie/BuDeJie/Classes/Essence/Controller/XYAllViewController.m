@@ -112,6 +112,15 @@
 
 
 /**
+ 返回下载类型
+ */
+- (XYTopicType)loadType
+{
+    return XYTopicTypeVideo;
+}
+
+
+/**
  下拉刷新新的数据
  */
 - (void)loadNewTopics
@@ -119,7 +128,7 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
+    parameters[@"type"] = @(self.loadType); // 这里发送@1也是可行的
     
     [XYHttpTool getWithURL:XYCommonURL params:parameters success:^(NSDictionary* json) {
         
@@ -151,7 +160,7 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
+    parameters[@"type"] = @(self.loadType); // 这里发送@1也是可行的
     parameters[@"maxtime"] = self.maxtime;
     
     [XYHttpTool getWithURL:XYCommonURL params:parameters success:^(id json) {

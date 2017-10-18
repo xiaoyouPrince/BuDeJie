@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XYTopic;
 
 @interface XYTopicVideoView : UIView
+
+@property(nonatomic , strong) XYTopic  *model;
 
 @end

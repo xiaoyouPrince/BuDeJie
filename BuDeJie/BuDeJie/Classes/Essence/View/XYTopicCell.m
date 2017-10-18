@@ -107,13 +107,8 @@ static const CGFloat XYMargin = 10;
     _model = model;
     
     // 顶部控件的数据
-    UIImage *placeholder = [UIImage circleImageNamed:@"defaultUserIcon"];
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:placeholder options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        // 图片下载失败，直接返回，按照它的默认做法
-        if (!image) return;
-        
-        self.profileImageView.image = [image circleImage];
-    }];
+    // 头像icon(设置圆角图片)
+    [self.profileImageView xy_setHeader:model.profile_image];
     
     self.nameLabel.text = model.name;
     self.passtimeLabel.text = model.passtime;
@@ -171,6 +166,9 @@ static const CGFloat XYMargin = 10;
             self.pictureView.hidden = YES;
             self.voiceView.hidden = YES;
             self.videoView.hidden = NO;
+            
+            // 给内部voice控件赋值
+            self.videoView.model = model;
         }
             break;
             
