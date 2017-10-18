@@ -27,6 +27,9 @@
     
     [self.window makeKeyAndVisible];
     
+    // AFN 监听网络连接情况
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
     return YES;
 }
 

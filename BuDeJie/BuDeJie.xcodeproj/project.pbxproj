@@ -70,6 +70,7 @@
 		B4D440131F6B8A03002B9D94 /* XYWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D440121F6B8A03002B9D94 /* XYWordViewController.m */; };
 		B4D4952E1F6688DF00A5EE5E /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */; };
 		B4D7D5FE1F790AA6000616FE /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D5FD1F790AA6000616FE /* XYCommon.m */; };
+		B4E8C77A1F95D91A00E98921 /* UIImageView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E8C7791F95D91A00E98921 /* UIImageView+XYAdd.m */; };
 		B4E968511F8DF5F300CC4BD5 /* XYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E968501F8DF5F300CC4BD5 /* XYTopicCell.m */; };
 		B4E968531F8DF62600CC4BD5 /* XYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */; };
 		B4EA404C1F906D0D00261506 /* NSObject+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EA404B1F906D0D00261506 /* NSObject+XYAdd.m */; };
@@ -211,6 +212,8 @@
 		B4D4952D1F6688DF00A5EE5E /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 		B4D7D5FC1F790AA6000616FE /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
 		B4D7D5FD1F790AA6000616FE /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
+		B4E8C7781F95D91A00E98921 /* UIImageView+XYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XYAdd.h"; sourceTree = "<group>"; };
+		B4E8C7791F95D91A00E98921 /* UIImageView+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XYAdd.m"; sourceTree = "<group>"; };
 		B4E968411F8DCA2200CC4BD5 /* XYTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopicCell.h; sourceTree = "<group>"; };
 		B4E968501F8DF5F300CC4BD5 /* XYTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicCell.m; sourceTree = "<group>"; };
 		B4E968521F8DF62600CC4BD5 /* XYTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYTopicCell.xib; sourceTree = "<group>"; };
@@ -676,6 +679,8 @@
 				B4BFC47A1F6700A100439EDD /* UIBarButtonItem+XYAdd.m */,
 				B4B020C81F6934D0005A9F39 /* UITextField+XYAdd.h */,
 				B4B020C91F6934D0005A9F39 /* UITextField+XYAdd.m */,
+				B4E8C7781F95D91A00E98921 /* UIImageView+XYAdd.h */,
+				B4E8C7791F95D91A00E98921 /* UIImageView+XYAdd.m */,
 				B4A3C9081F950EC600BD280D /* XYAdd.h */,
 				B4A3C9091F950EC600BD280D /* XYAdd.m */,
 			);
@@ -1023,6 +1028,7 @@
 				B4D440101F6B89F8002B9D94 /* XYPictureViewController.m in Sources */,
 				B4BFC4B01F6849B700439EDD /* XYSubTagItem.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
+				B4E8C77A1F95D91A00E98921 /* UIImageView+XYAdd.m in Sources */,
 				B4EA40571F90C14600261506 /* XYTopicVoiceView.m in Sources */,
 				B4EA40521F90C10500261506 /* XYTopicVideoView.m in Sources */,
 				B4D4400A1F6B89E0002B9D94 /* XYVideoViewController.m in Sources */,

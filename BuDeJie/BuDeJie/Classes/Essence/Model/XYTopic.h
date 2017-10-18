@@ -53,7 +53,7 @@ typedef NS_ENUM( NSInteger , XYTopicType ) {
 /** 高度(像素) */
 @property (nonatomic, assign) NSInteger height;
 
-
+#pragma mark -- voice 部分
 /** 小图 */
 @property (nonatomic, copy) NSString *image0;
 /** 中图 */
@@ -67,6 +67,7 @@ typedef NS_ENUM( NSInteger , XYTopicType ) {
 @property (nonatomic, assign) NSInteger videotime;
 /** 音频\视频的播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
+#pragma mark -- voice 部分
 
 /** 中间内容的frame */
 @property (nonatomic, assign) CGRect middleFrame;

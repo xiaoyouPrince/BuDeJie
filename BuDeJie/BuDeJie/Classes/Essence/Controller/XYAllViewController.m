@@ -119,7 +119,7 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
     
     [XYHttpTool getWithURL:XYCommonURL params:parameters success:^(NSDictionary* json) {
         
@@ -151,7 +151,7 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
     parameters[@"maxtime"] = self.maxtime;
     
     [XYHttpTool getWithURL:XYCommonURL params:parameters success:^(id json) {
@@ -197,8 +197,6 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
     
     XYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:TopicCellID];
     cell.model = self.topics[indexPath.row];    

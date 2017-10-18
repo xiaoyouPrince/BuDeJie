@@ -161,6 +161,9 @@ static const CGFloat XYMargin = 10;
             self.pictureView.hidden = YES;
             self.voiceView.hidden = NO;
             self.videoView.hidden = YES;
+            
+            // 给内部voice控件赋值
+            self.voiceView.model = model;
         }
             break;
         case XYTopicTypeVideo:

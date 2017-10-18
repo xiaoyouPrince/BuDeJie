@@ -1,15 +1,14 @@
 //
-//  XYAdd.m
+//  UIImageView+XYAdd.m
 //  BuDeJie
 //
-//  Created by 渠晓友 on 2017/10/16.
+//  Created by 渠晓友 on 2017/10/17.
 //  Copyright © 2017年 XiaoYou. All rights reserved.
 //
 
-#import "XYAdd.h"
+#import "UIImageView+XYAdd.h"
 
-
-@implementation XYAdd
+@implementation UIImageView (XYAdd)
 
 - (void)xy_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder
 {
@@ -48,7 +47,7 @@
     }
 }
 
-- (void)xmg_setHeader:(NSString *)headerUrl
+- (void)xy_setHeader:(NSString *)headerUrl
 {
     UIImage *placeholder = [UIImage circleImageNamed:@"defaultUserIcon"];
     [self sd_setImageWithURL:[NSURL URLWithString:headerUrl] placeholderImage:placeholder options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
