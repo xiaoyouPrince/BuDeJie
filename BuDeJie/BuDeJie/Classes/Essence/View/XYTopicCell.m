@@ -149,6 +149,8 @@ static const CGFloat XYMargin = 10;
             self.pictureView.hidden = NO;
             self.voiceView.hidden = YES;
             self.videoView.hidden = YES;
+            
+            self.pictureView.model = model;
         }
             break;
         case XYTopicTypeVoice:

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XYTopic;
 
 @interface XYTopicPictureView : UIView
+
+@property(nonatomic , strong) XYTopic  *model;
+
 
 @end
