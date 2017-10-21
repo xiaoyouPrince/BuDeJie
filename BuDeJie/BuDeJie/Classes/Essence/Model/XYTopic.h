@@ -61,6 +61,13 @@ typedef NS_ENUM( NSInteger , XYTopicType ) {
 /** 大图 */
 @property (nonatomic, copy) NSString *image1;
 
+#pragma mark -- picture 部分
+/** 是否为动图 */
+@property (nonatomic, assign) BOOL is_gif;
+/** 是否为超长图片 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+#pragma mark -- picture 部分
+
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 视频时长 */

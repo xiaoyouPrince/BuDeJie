@@ -9,6 +9,12 @@
 // 本类严重依赖 AFNetWorking 和 SDwebimage
 
 #import <UIKit/UIKit.h>
+#import <UIImageView+WebCache.h>
+
+/**
+ 一种返回完成的类型
+ */
+typedef void(^SDImageDownloadCompletedBlock)(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL);
 
 @interface UIImageView (XYAdd)
 
@@ -21,6 +27,17 @@
  @param placeholder 占位图
  */
 - (void)xy_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder;
+
+
+/**
+ 设置原图、缩略图、占位图。内部会根据网络状态和缓存做对应处理
+ 
+ @param originImageURL 原图URL
+ @param thumbnailImageURL 缩略图URL
+ @param placeholder 占位图
+ @param completed 下载完成后的回调
+ */
+- (void)xy_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder comopleted:(SDExternalCompletionBlock)completed;
 
 
 /**

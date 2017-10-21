@@ -116,7 +116,7 @@
  */
 - (XYTopicType)loadType
 {
-    return XYTopicTypeVideo;
+    return XYTopicTypePicture;
 }
 
 

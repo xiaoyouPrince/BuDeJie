@@ -32,18 +32,19 @@
 {
     _model = model;
     
-
     // 设置图片
     self.placeholderView.hidden = NO;
-    [self.imageView xmg_setOriginImage:topic.image1 thumbnailImage:topic.image0 placeholder:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    
+    [self.imageView xy_setOriginImage:model.image1 thumbnailImage:model.image0 placeholder:nil comopleted:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+
         if (!image) return;
         
         self.placeholderView.hidden = YES;
         
         // 处理超长图片的大小
-        if (topic.isBigPicture) {
-            CGFloat imageW = topic.middleFrame.size.width;
-            CGFloat imageH = imageW * topic.height / topic.width;
+        if (model.isBigPicture) {
+            CGFloat imageW = model.middleFrame.size.width;
+            CGFloat imageH = imageW * model.height / model.width;
             
             // 开启上下文
             UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
