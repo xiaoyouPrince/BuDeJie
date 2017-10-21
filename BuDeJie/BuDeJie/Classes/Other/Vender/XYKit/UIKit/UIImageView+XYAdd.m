@@ -61,7 +61,9 @@
     }else
     {
         if (mgr.isReachableViaWiFi) {
+            
             [self sd_setImageWithURL:[NSURL URLWithString:originImageURL] placeholderImage:placeholder completed:completed];
+            
         } else if (mgr.isReachableViaWWAN) {
 #warning downloadOriginImageWhen3GOr4G配置项的值需要从沙盒里面获取
             // 3G\4G网络下时候要下载原图

@@ -8,11 +8,12 @@
 
 #import "XYTopicPictureView.h"
 #import "XYTopic.h"
+#import <FLAnimatedImageView.h>
 
 
 @interface XYTopicPictureView()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPictureButton;
@@ -58,6 +59,9 @@
     
     // gif
     self.gifView.hidden = !model.is_gif;
+    if (model.is_gif) {
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.image1]];
+    }
     
     // 点击查看大图
     if (model.isBigPicture) { // 超长图

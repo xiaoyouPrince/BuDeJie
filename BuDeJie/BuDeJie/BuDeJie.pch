@@ -16,6 +16,7 @@
 #import <MJExtension/MJExtension.h>
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
+#import <FLAnimatedImageView+WebCache.h>
 #import <SVProgressHUD.h>
 
 #import "XYKit.h"

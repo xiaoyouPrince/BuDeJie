@@ -5,6 +5,7 @@ target 'BuDeJie' do
 pod 'AFNetworking', '~> 3.0'
 pod 'MJExtension', '~> 3.0.13'
 pod 'SDWebImage', '~> 4.0.0'
+pod 'SDWebImage/GIF' # SD 4.0之后使用gif的方法
 pod 'SVProgressHUD', '~> 2.1.2'
 pod 'MJRefresh', '~> 3.1.12'
 

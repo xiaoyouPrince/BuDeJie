@@ -9,8 +9,8 @@
 // 本类严重依赖 AFNetWorking 和 SDwebimage
 
 #import <UIKit/UIKit.h>
-#import <UIImageView+WebCache.h>
-
+//#import <UIImageView+WebCache.h>
+#import <FLAnimatedImageView+WebCache.h>
 /**
  一种返回完成的类型
  */
