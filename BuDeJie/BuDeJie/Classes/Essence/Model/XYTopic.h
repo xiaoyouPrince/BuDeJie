@@ -48,9 +48,9 @@ typedef NS_ENUM( NSInteger , XYTopicType ) {
 /** 最热评论 */
 @property (nonatomic, strong) NSArray *top_cmt;
 
-/** 宽度(像素) */
+/** 图片宽度(像素) */
 @property (nonatomic, assign) NSInteger width;
-/** 高度(像素) */
+/** 图片高度(像素) */
 @property (nonatomic, assign) NSInteger height;
 
 #pragma mark -- voice 部分

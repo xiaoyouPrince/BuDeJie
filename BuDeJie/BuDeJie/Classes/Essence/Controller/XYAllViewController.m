@@ -38,6 +38,13 @@
     
     _dataArray = @[@"ib服务i",@"佛玩法",@"很热很热",@"ljm7",@"脾气九宫格",@"喔i4yjnge",@"欧气会各二个人",@"欧威银行业务 ",@"5uejprklreye5欧尼",@"i34uwtq93848y艾克开会",@"该不该欧委会我IEUHF蓝帆",@"4一公分沃尔夫",@"4\(^o^)/~欧冠"];
     
+    if (iOS11) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
+    
     self.view.backgroundColor = kGlobalBg;
     //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TopicCellID];
     [self.tableView registerNib:[UINib nibWithNibName:@"XYTopicCell" bundle:nil] forCellReuseIdentifier:TopicCellID];
@@ -45,7 +52,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XYTitleButtonDidRepeatClickNotification object:nil];
-    
     
     // 处理刷新功能
     [self configRefresh];

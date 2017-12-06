@@ -35,7 +35,8 @@ inline UIImage *SDScaledImageForKey(NSString * _Nullable key, UIImage * _Nullabl
 #elif SD_UIKIT
         if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
 #endif
-            CGFloat scale = 1;
+//            CGFloat scale = 1;
+            CGFloat scale = [UIScreen mainScreen].scale;
             if (key.length >= 8) {
                 NSRange range = [key rangeOfString:@"@2x."];
                 if (range.location != NSNotFound) {

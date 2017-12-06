@@ -42,24 +42,22 @@
         
         self.placeholderView.hidden = YES;
         
-        // 处理超长图片的大小
+        // 处理超长图片
         if (model.isBigPicture) {
+            
             CGFloat imageW = model.middleFrame.size.width;
             CGFloat imageH = imageW * model.height / model.width;
             
-            // 开启上下文
             UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
-            // 绘制图片到上下文中
             [self.imageView.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
             self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-            // 关闭上下文
             UIGraphicsEndImageContext();
         }
     }];
     
     // gif
     self.gifView.hidden = !model.is_gif;
-    if (model.is_gif) {
+    if (model.is_gif) {// 这里gif图片什么的只能使用FLAnimatedImageView。这里重新调用这个方法
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.image1]];
     }
     
@@ -68,10 +66,12 @@
         self.seeBigPictureButton.hidden = NO;
         self.imageView.contentMode = UIViewContentModeTop;
         self.imageView.clipsToBounds = YES;
+        
     } else {
         self.seeBigPictureButton.hidden = YES;
         self.imageView.contentMode = UIViewContentModeScaleToFill;
         self.imageView.clipsToBounds = NO;
+        
     }
     
 }

@@ -80,7 +80,12 @@ static NSInteger const XYTag = 100;
 - (void)setupScrollView
 {
     // 不允许自动修改UIScrollView的内边距
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    if (@available(iOS 11.0, *)) {
+        self.scrollview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+    } else {
+        // Fallback on earlier versions
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     //scrollView.backgroundColor = [UIColor blueColor];

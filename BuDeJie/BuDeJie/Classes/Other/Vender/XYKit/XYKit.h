@@ -21,6 +21,8 @@
 /*************** Foundation **************/
 #import "NSObject+XYAdd.h"
 #import "NSString+XYAdd.h"
+#import "NSArray+XYAdd.h"
+#import "NSMutableArray+XYAdd.h"
 
 
 /*************** XYTools **************/

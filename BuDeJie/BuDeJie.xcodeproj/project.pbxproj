@@ -15,6 +15,8 @@
 		B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD531F6A2B4F0056C1A5 /* XYWebViewController.m */; };
 		B46BFD561F6A2B4F0056C1A5 /* XYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */; };
 		B46BFD5A1F6A7ABA0056C1A5 /* XYFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD591F6A7ABA0056C1A5 /* XYFileTool.m */; };
+		B46DCB5D1FD68FA400BC83F6 /* NSArray+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DCB5C1FD68FA400BC83F6 /* NSArray+XYAdd.m */; };
+		B46DCB601FD6920600BC83F6 /* NSMutableArray+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DCB5F1FD6920600BC83F6 /* NSMutableArray+XYAdd.m */; };
 		B48C73D51F8CD1F6003A796B /* XYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = B48C73D41F8CD1F6003A796B /* XYTopic.m */; };
 		B49690201F62444300F7A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B496901E1F62444300F7A17C /* Main.storyboard */; };
 		B49690221F62444300F7A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49690211F62444300F7A17C /* Assets.xcassets */; };
@@ -113,6 +115,10 @@
 		B46BFD541F6A2B4F0056C1A5 /* XYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYWebViewController.xib; sourceTree = "<group>"; };
 		B46BFD581F6A7ABA0056C1A5 /* XYFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFileTool.h; sourceTree = "<group>"; };
 		B46BFD591F6A7ABA0056C1A5 /* XYFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFileTool.m; sourceTree = "<group>"; };
+		B46DCB5B1FD68FA400BC83F6 /* NSArray+XYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+XYAdd.h"; sourceTree = "<group>"; };
+		B46DCB5C1FD68FA400BC83F6 /* NSArray+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XYAdd.m"; sourceTree = "<group>"; };
+		B46DCB5E1FD6920600BC83F6 /* NSMutableArray+XYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+XYAdd.h"; sourceTree = "<group>"; };
+		B46DCB5F1FD6920600BC83F6 /* NSMutableArray+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XYAdd.m"; sourceTree = "<group>"; };
 		B48C73D31F8CD1F6003A796B /* XYTopic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopic.h; sourceTree = "<group>"; };
 		B48C73D41F8CD1F6003A796B /* XYTopic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTopic.m; sourceTree = "<group>"; };
 		B49690121F62444300F7A17C /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -664,6 +670,10 @@
 				B4EA404B1F906D0D00261506 /* NSObject+XYAdd.m */,
 				B4EA404D1F906D5E00261506 /* NSString+XYAdd.h */,
 				B4EA404E1F906D5E00261506 /* NSString+XYAdd.m */,
+				B46DCB5B1FD68FA400BC83F6 /* NSArray+XYAdd.h */,
+				B46DCB5C1FD68FA400BC83F6 /* NSArray+XYAdd.m */,
+				B46DCB5E1FD6920600BC83F6 /* NSMutableArray+XYAdd.h */,
+				B46DCB5F1FD6920600BC83F6 /* NSMutableArray+XYAdd.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1016,6 +1026,7 @@
 				B496906B1F62935400F7A17C /* XYEssenceViewController.m in Sources */,
 				B4B020C41F690CBA005A9F39 /* XYFastBtn.m in Sources */,
 				B496906E1F629F0B00F7A17C /* XYFriendTrendViewController.m in Sources */,
+				B46DCB5D1FD68FA400BC83F6 /* NSArray+XYAdd.m in Sources */,
 				B4BFC4AD1F68490500439EDD /* XYSubTagViewController.m in Sources */,
 				B4B020BF1F690A40005A9F39 /* XYFastLoginView.m in Sources */,
 				B49690771F629FE400F7A17C /* XYProfileViewController.m in Sources */,
@@ -1039,6 +1050,7 @@
 				B46BFD4D1F696E900056C1A5 /* XYSquareCell.m in Sources */,
 				B4BFC4A81F683B4100439EDD /* XYADItem.m in Sources */,
 				B49690671F6292AA00F7A17C /* AppDelegate.m in Sources */,
+				B46DCB601FD6920600BC83F6 /* NSMutableArray+XYAdd.m in Sources */,
 				B4D7D5FE1F790AA6000616FE /* XYCommon.m in Sources */,
 				B46BFD551F6A2B4F0056C1A5 /* XYWebViewController.m in Sources */,
 				B4B020CA1F6934D0005A9F39 /* UITextField+XYAdd.m in Sources */,

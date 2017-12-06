@@ -108,7 +108,12 @@ static const CGFloat XYMargin = 10;
     
     // 顶部控件的数据
     // 头像icon(设置圆角图片)
+    NSDate *d1 = [NSDate date];
+#warning mark --  this place's time cost is 0.002252 - 0.004798
     [self.profileImageView xy_setHeader:model.profile_image];
+    NSDate *d2 = [NSDate date];
+    double inter = [d2 timeIntervalSinceDate:d1];
+    NSLog(@"原型头像时间差 --- %lf",inter);
     
     self.nameLabel.text = model.name;
     self.passtimeLabel.text = model.passtime;
@@ -150,7 +155,15 @@ static const CGFloat XYMargin = 10;
             self.voiceView.hidden = YES;
             self.videoView.hidden = YES;
             
+//            self.pictureView.model = model;
+            
+            
+            NSDate *d1 = [NSDate date];
             self.pictureView.model = model;
+            NSDate *d2 = [NSDate date];
+            double inter = [d2 timeIntervalSinceDate:d1];
+            NSLog(@"内部model赋值时间差 --- %lf",inter);
+            
         }
             break;
         case XYTopicTypeVoice:
