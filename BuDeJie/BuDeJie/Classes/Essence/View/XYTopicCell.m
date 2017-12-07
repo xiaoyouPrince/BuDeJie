@@ -113,7 +113,8 @@ static const CGFloat XYMargin = 10;
     [self.profileImageView xy_setHeader:model.profile_image];
     NSDate *d2 = [NSDate date];
     double inter = [d2 timeIntervalSinceDate:d1];
-    NSLog(@"原型头像时间差 --- %lf",inter);
+//    NSLog(@"原型头像时间差 --- %lf",inter);
+    
     
     self.nameLabel.text = model.name;
     self.passtimeLabel.text = model.passtime;
@@ -162,7 +163,9 @@ static const CGFloat XYMargin = 10;
             self.pictureView.model = model;
             NSDate *d2 = [NSDate date];
             double inter = [d2 timeIntervalSinceDate:d1];
-            NSLog(@"内部model赋值时间差 --- %lf",inter);
+//            NSLog(@"内部model赋值时间差 --- %lf",inter);
+            
+            
             
         }
             break;

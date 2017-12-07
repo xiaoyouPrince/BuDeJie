@@ -17,6 +17,7 @@
 		B46BFD5A1F6A7ABA0056C1A5 /* XYFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B46BFD591F6A7ABA0056C1A5 /* XYFileTool.m */; };
 		B46DCB5D1FD68FA400BC83F6 /* NSArray+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DCB5C1FD68FA400BC83F6 /* NSArray+XYAdd.m */; };
 		B46DCB601FD6920600BC83F6 /* NSMutableArray+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DCB5F1FD6920600BC83F6 /* NSMutableArray+XYAdd.m */; };
+		B46DCB691FD7EE5100BC83F6 /* XYSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DCB681FD7EE5100BC83F6 /* XYSeeBigPictureViewController.m */; };
 		B48C73D51F8CD1F6003A796B /* XYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = B48C73D41F8CD1F6003A796B /* XYTopic.m */; };
 		B49690201F62444300F7A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B496901E1F62444300F7A17C /* Main.storyboard */; };
 		B49690221F62444300F7A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49690211F62444300F7A17C /* Assets.xcassets */; };
@@ -119,6 +120,8 @@
 		B46DCB5C1FD68FA400BC83F6 /* NSArray+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XYAdd.m"; sourceTree = "<group>"; };
 		B46DCB5E1FD6920600BC83F6 /* NSMutableArray+XYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+XYAdd.h"; sourceTree = "<group>"; };
 		B46DCB5F1FD6920600BC83F6 /* NSMutableArray+XYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XYAdd.m"; sourceTree = "<group>"; };
+		B46DCB671FD7EE5100BC83F6 /* XYSeeBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		B46DCB681FD7EE5100BC83F6 /* XYSeeBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSeeBigPictureViewController.m; sourceTree = "<group>"; };
 		B48C73D31F8CD1F6003A796B /* XYTopic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTopic.h; sourceTree = "<group>"; };
 		B48C73D41F8CD1F6003A796B /* XYTopic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTopic.m; sourceTree = "<group>"; };
 		B49690121F62444300F7A17C /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,6 +394,8 @@
 				B4D4400F1F6B89F8002B9D94 /* XYPictureViewController.m */,
 				B4D440111F6B8A03002B9D94 /* XYWordViewController.h */,
 				B4D440121F6B8A03002B9D94 /* XYWordViewController.m */,
+				B46DCB671FD7EE5100BC83F6 /* XYSeeBigPictureViewController.h */,
+				B46DCB681FD7EE5100BC83F6 /* XYSeeBigPictureViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1039,6 +1044,7 @@
 				B4D440101F6B89F8002B9D94 /* XYPictureViewController.m in Sources */,
 				B4BFC4B01F6849B700439EDD /* XYSubTagItem.m in Sources */,
 				B49690681F6292AA00F7A17C /* main.m in Sources */,
+				B46DCB691FD7EE5100BC83F6 /* XYSeeBigPictureViewController.m in Sources */,
 				B4E8C77A1F95D91A00E98921 /* UIImageView+XYAdd.m in Sources */,
 				B4EA40571F90C14600261506 /* XYTopicVoiceView.m in Sources */,
 				B4EA40521F90C10500261506 /* XYTopicVideoView.m in Sources */,

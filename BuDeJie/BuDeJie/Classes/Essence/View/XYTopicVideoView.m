@@ -8,6 +8,7 @@
 
 #import "XYTopicVideoView.h"
 #import "XYTopic.h"
+#import "XYSeeBigPictureViewController.h"
 
 @interface XYTopicVideoView()
 
@@ -24,7 +25,22 @@
     [super awakeFromNib];
     
     // 设置自己AutoResizingMask 为空
-    self.autoresizingMask = UIViewAutoresizingNone;
+    self.autoresizingMask = UIViewAutoresizingNone;    // imageView 点击
+    self.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)];
+    [self.imageView addGestureRecognizer:tap];
+    
+}
+
+
+/**
+ 查看大图
+ */
+- (void)seeBigPicture
+{
+    XYSeeBigPictureViewController *seeBigVc = [XYSeeBigPictureViewController new];
+    seeBigVc.model = self.model;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBigVc animated:YES completion:nil];
 }
 
 - (void)setModel:(XYTopic *)model

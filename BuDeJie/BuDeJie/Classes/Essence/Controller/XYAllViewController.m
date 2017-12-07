@@ -116,6 +116,12 @@
     }];
 }
 
+// scrollView 滚动完毕之后清理内存缓存
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [[SDImageCache sharedImageCache] clearMemory];
+}
+
 
 /**
  返回下载类型
@@ -199,6 +205,11 @@
     return self.topics.count;
 }
 
+/**
+ 估算高度：
+ 有估算高度，数据源调用顺序 --> 先 cellForRow 然后调用对应 heightForRow
+ 没有估算高度，数据源调用顺序 --> 先 heightForRow 然后调用对应 cellForRow
+ */
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 60;
@@ -207,26 +218,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"heightForRowAtIndexPath---------");
     return self.topics[indexPath.row].cellHeight;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSLog(@"cellForRowAtIndexPath---------");
     XYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:TopicCellID];
-    cell.model = self.topics[indexPath.row];    
+    
+    // Marrk : 在iOS 11 中无论是用不用估算高度方法，这里都是先执行cellForRow方法，所以计算高度和大图直接在这里进行，防止iOS 11之下，运行的过程中 model.isBigPicture 为赋值
+    XYTopic *model = self.topics[indexPath.row];
+    [model calculateIsBigPicture];
+    cell.model = model;
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    DLog(@"%@",NSStringFromUIOffset(UIOffsetMake(scrollView.contentOffset.x, scrollView.contentOffset.y)));
-//}
+
 
 
 

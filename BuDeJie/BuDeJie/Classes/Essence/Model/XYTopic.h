@@ -64,8 +64,7 @@ typedef NS_ENUM( NSInteger , XYTopicType ) {
 #pragma mark -- picture 部分
 /** 是否为动图 */
 @property (nonatomic, assign) BOOL is_gif;
-/** 是否为超长图片 */
-@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+
 #pragma mark -- picture 部分
 
 /** 音频时长 */
@@ -83,6 +82,29 @@ typedef NS_ENUM( NSInteger , XYTopicType ) {
 /* 额外增加的属性（并非服务器返回的属性，仅仅是为了提高开发效率） */
 /** 根据当前模型计算出来的cell高度 */
 @property (nonatomic, assign) CGFloat cellHeight;
+/** 是否为超长图片 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+
+/**
+ 用于计算这里是不是超长图片
+ iOS 11 中tableViewCell的高度计算顺序发生变化
+ 
+ iOS 11 中数据源方法的调用顺序(无论有没有估算高度都是直接先执行cellForRow)
+     estimatedHeightForRow --> cellForRow -- > heightForRow
+     cellForRow -- > heightForRow
+ 
+ iOS 10 以下有没有估算高度是不用的
+     estimatedHeightForRow --> cellForRow -- > heightForRow
+     heightForRow -- > cellForRow
+ 
+ 注意：本项目中使用了估算高度，所以为了更好的适配 iOS 11 所以添加这个方法，直接在cellForRow的时候计算一下是不是大图
+ 
+ */
+
+/**
+ cellForRow 中提前计算是不是大图使用
+ */
+- (void)calculateIsBigPicture;
 
 
 

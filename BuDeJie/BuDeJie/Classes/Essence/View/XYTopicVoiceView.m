@@ -8,6 +8,7 @@
 
 #import "XYTopicVoiceView.h"
 #import "XYTopic.h"
+#import "XYSeeBigPictureViewController.h"
 
 
 @interface XYTopicVoiceView()
@@ -26,7 +27,24 @@
     
     // 自己是xib 来的，创建完毕，直接取消AutoResizingMask防止跟着父控件拉伸
     self.autoresizingMask = UIViewAutoresizingNone;
+    // imageView 点击
+    self.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)];
+    [self.imageView addGestureRecognizer:tap];
+    
 }
+
+
+/**
+ 查看大图
+ */
+- (void)seeBigPicture
+{
+    XYSeeBigPictureViewController *seeBigVc = [XYSeeBigPictureViewController new];
+    seeBigVc.model = self.model;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBigVc animated:YES completion:nil];
+}
+
 
 - (void)setModel:(XYTopic *)model
 {

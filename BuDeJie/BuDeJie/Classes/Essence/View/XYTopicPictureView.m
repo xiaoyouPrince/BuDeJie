@@ -9,6 +9,7 @@
 #import "XYTopicPictureView.h"
 #import "XYTopic.h"
 #import <FLAnimatedImageView.h>
+#import "XYSeeBigPictureViewController.h"
 
 
 @interface XYTopicPictureView()
@@ -27,6 +28,23 @@
 {
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    // imageView 点击
+    self.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)];
+    [self.imageView addGestureRecognizer:tap];
+    
+}
+
+
+/**
+ 查看大图
+ */
+- (void)seeBigPicture
+{
+    XYSeeBigPictureViewController *seeBigVc = [XYSeeBigPictureViewController new];
+    seeBigVc.model = self.model;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBigVc animated:YES completion:nil];
 }
 
 - (void)setModel:(XYTopic *)model
@@ -43,8 +61,10 @@
         self.placeholderView.hidden = YES;
         
         // 处理超长图片
-        if (model.isBigPicture) {
-            
+        BOOL isBigPicture = model.isBigPicture;
+        DLog(@"isBigPicture ----- %d",isBigPicture);
+        if (isBigPicture) {
+            DLog(@"isBigPicture ----- %d",isBigPicture);
             CGFloat imageW = model.middleFrame.size.width;
             CGFloat imageH = imageW * model.height / model.width;
             
@@ -52,6 +72,9 @@
             [self.imageView.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
             self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
+        }else
+        {
+            DLog(@"isBigPicture ----- %d",isBigPicture);
         }
     }];
     
